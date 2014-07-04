@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zach and Katie Forever</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+	what about now
+	<div class="row">
+		<div class="span3">about us</div>
+		<div class="span9"><%= yield %></div>
+	</div>
+</div>
+
+</body>
+</html>
