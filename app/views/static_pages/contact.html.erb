@@ -1,0 +1,13 @@
+<%= form_tag("/send_mail", method: "post") do %>
+  <%= label_tag(:q, "Name:") %>
+  <%= text_field_tag(:name) %>
+  <%= label_tag(:q, "Email:") %>
+  <%= email_field_tag(:email) %>
+  <%= label_tag(:q, "Message:") %>
+  <%= text_area_tag(:message) %>
+</br>In order for this email to be sent to Zach and Katie you must put the subject line as "Wedding Contact" but with no quotes.
+  <%= label_tag(:q, "Subject:") %>
+  <%= text_field_tag(:subject) %>
+</br>
+  <%= submit_tag("Send") %>
+<% end %>
