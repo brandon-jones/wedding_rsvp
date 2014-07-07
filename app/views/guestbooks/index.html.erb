@@ -1,0 +1,29 @@
+
+<h1>The Guestbooks</h1>
+
+<%= render partial: 'form' %>
+
+<%= paginate @guestbooks %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Created on</th>
+      <th>Message</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @guestbooks.each do |guestbook| %>
+      <tr>
+        <td><%= guestbook.name %></td>
+        <td><%= guestbook.created_at.to_formatted_s(:short) %></td>
+        <td><%= guestbook.message %></td>
+        <td title="Click to report"><%= flag_status(guestbook)%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

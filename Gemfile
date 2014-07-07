@@ -32,6 +32,9 @@ gem "therubyracer"
 gem "less-rails"
 gem 'twitter-bootstrap-rails'
 
+#pagenation
+gem 'kaminari'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -40,6 +43,8 @@ end
 group :development do 
 	gem 'pry', '~> 0.10.0'
   gem 'pry-rails'
+  gem 'meta_request'
+  gem 'faker', '~> 1.4.1'
 end
 
 # Use ActiveModel has_secure_password

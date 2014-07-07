@@ -1,4 +1,10 @@
 WeddingRsvp::Application.routes.draw do
+  resources :guestbooks, except: [ :show, :update, :edit, :new ] do
+    get 'manage', on: :collection 
+    get 'flag', on: :member
+    get 'approve', on: :member
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -7,7 +13,9 @@ WeddingRsvp::Application.routes.draw do
 
   get 'contact' => 'static_pages#contact'
 
-  post 'send_mail' => 'static_pages#send_mail'
+  post 'send_mail' => 'static_pages#send_mail' 
+
+  get 'tehachapi' => 'static_pages#tehachapi'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
