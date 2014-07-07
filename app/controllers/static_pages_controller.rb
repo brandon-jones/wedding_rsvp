@@ -15,6 +15,10 @@ class StaticPagesController < ApplicationController
   	# @contact = { name: '', email: '', message: '' }
   end
 
+  def tehacahpi
+    
+  end
+
   def send_mail
   	if params && params[:name] && params[:email] && params[:message] && params[:subject]
   		if cookies[:sent_contact].present?

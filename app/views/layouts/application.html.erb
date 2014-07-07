@@ -5,15 +5,16 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
 	<%= image_tag("zandk.jpg", :alt => "rss feed", :class => 'img-rounded', :id => 'top-image') %>
 	<div class="row">
-		<div class="span3">
-			<%= render partial: 'side_bar' %>
+		<div class="span2">
+			<%= render partial: 'static_pages/side_bar' %>
 		</div>
-		<div class="span9">
+		<div class="span10">
 			<% flash.each do |name, msg| -%>
 			  <%= content_tag :div, msg, class: name %>
 			<% end -%>

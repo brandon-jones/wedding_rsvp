@@ -1,0 +1,11 @@
+<h1>Managing Guestbook</h1>
+<% if @flagged.count > 0 %>
+	Flagged Messages
+	<%= render 'table', :post => @flagged %>
+	<br/>
+<% end %>
+
+All Messages
+<%= paginate @guestbooks %>
+<%= render 'table', :post => @guestbooks %>
+<br>
