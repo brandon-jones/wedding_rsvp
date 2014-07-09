@@ -3,6 +3,7 @@ WeddingRsvp::Application.routes.draw do
     get 'manage', on: :collection 
     get 'flag', on: :member
     get 'approve', on: :member
+    get 'export', on: :collection
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

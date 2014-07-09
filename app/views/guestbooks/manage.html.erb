@@ -1,4 +1,6 @@
 <h1>Managing Guestbook</h1>
+<%= link_to('Export', export_guestbooks_path) %>
+<br/>
 <% if @flagged.count > 0 %>
 	Flagged Messages
 	<%= render 'table', :post => @flagged %>
