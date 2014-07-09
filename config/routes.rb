@@ -1,4 +1,8 @@
 WeddingRsvp::Application.routes.draw do
+  resources :blogs , except: [ :show, :update, :new ] do
+    get 'manage', on: :collection
+  end
+
   resources :guestbooks, except: [ :show, :update, :edit, :new ] do
     get 'manage', on: :collection 
     get 'flag', on: :member

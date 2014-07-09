@@ -1,1 +1,56 @@
-Yay for you people!
+Wedding Location: Tehahacpi
+</br>
+</br>
+Date: Decemberish
+</br>
+</br>
+How to RSVP: Click the link!
+</br>
+</br>
+I have a question: Click the link!
+
+</br>
+</br>
+<h1>Most recent update</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Created On</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= blog.title %></td>
+        <td><%= blog.created_at.to_formatted_s(:short) %></td>
+        <td><%= blog.body %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h1>Guestbooks most recent</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Created on</th>
+      <th>Message</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @guestbooks.each do |guestbook| %>
+      <tr>
+        <td><%= guestbook.name %></td>
+        <td><%= guestbook.created_at.to_formatted_s(:short) %></td>
+        <td><%= guestbook.message %></td>
+        <td title="Click to report"><%= flag_status(guestbook)%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
