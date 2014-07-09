@@ -18,6 +18,13 @@ class GuestbooksController < ApplicationController
     @guestbook = Guestbook.new
   end
 
+  def export
+    @guestbook = Guestbook.all.reverse_order
+    Guestbook.generate_pdf
+    # send_file "tmp/pdf/export.pdf", :type=>'text/pdf'
+    redirect_to manage_guestbooks_path
+  end
+
   # GET /guestbooks/1/edit
   def edit
   end
