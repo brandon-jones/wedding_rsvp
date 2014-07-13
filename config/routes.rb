@@ -21,6 +21,8 @@ WeddingRsvp::Application.routes.draw do
   post 'send_mail' => 'static_pages#send_mail' 
 
   get 'tehachapi' => 'static_pages#tehachapi'
+  get 'tehachapi/hotels' => 'static_pages#hotels'
+  get 'tehachapi/restaurants' => 'static_pages#restaurants'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

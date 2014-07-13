@@ -16,8 +16,27 @@ class StaticPagesController < ApplicationController
   	# @contact = { name: '', email: '', message: '' }
   end
 
-  def tehacahpi
-    
+  def tehachapi
+    # @hotels = YAML.load_file("config/tehachapi_hotels.yml")[Rails.env]['hotels']
+    @hotels = YAML.load_file("config/tehachapi_hotels.yml")[Rails.env]['hotels']
+    weather = Weather.new
+    @current_weather = weather.get_current
+    @weather_forcast = weather.get_forcast
+    @current_weather['description'] = weather.code_description(@current_weather['weatherCode'])
+  end
+
+  def restaurants
+    @restaurants = YAML.load_file("config/tehachapi_restaurants.yml")[Rails.env]['restaurants']
+  end
+
+  def hotels
+    @hotels = YAML.load_file("config/tehachapi_hotels.yml")[Rails.env]['hotels']
+    weather = Weather.new
+    @current_weather = weather.get_current
+    @weather_forcast = weather.get_forcast
+    binding.pry
+    @current_weather['description'] = weather.code_description(@current_weather['weatherCode'])
+    render partial: 'hotel_listing'
   end
 
   def send_mail

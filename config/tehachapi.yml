@@ -1,0 +1,11 @@
+defaults: &defaults
+  weather_key: ba17b3a669e32c44a756765c13757300746c9398
+  
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

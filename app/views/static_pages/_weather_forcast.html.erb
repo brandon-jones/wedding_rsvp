@@ -1,0 +1,17 @@
+<div id="weather_forcast">
+	<% @weather_forcast.each do |forcast| %>
+		<h3>Weather Forcast for <%= forcast['date'] %></h3>
+		</br>
+		<%= image_tag(forcast['weatherIconUrl'][0]['value']) %>
+		</br>
+		<%= forcast['description'] %>
+	</br>
+		High: <%= forcast['tempMaxF'] %>
+	</br>
+		Low: <%= forcast['tempMinF'] %>
+	</br>
+		Wind Speed: <%= forcast['windspeedMiles'] %>
+	</br>
+		Wind Direction: <%= forcast['winddir16Point'] %>
+	<% end %>
+</div>

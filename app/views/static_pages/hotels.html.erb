@@ -1,0 +1,12 @@
+<iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC2jnFNLoXJAeIG9Eo1qIWEGmZNhxf1Em8&q=500+E+Steuber+Rd+Tehachapi+CA,418+W+Tehachapi+Blvd">
+</iframe>
+</br>
+<%= link_to('Hotels','tehachapi/hotels', id: 'hotels_js', remote: true) %>
+<%= link_to('Hotels','tehachapi/restaurants', id: 'hotels_js', remote: true) %>
+<div class="results">
+<%= render partial: 'hotel_listing' %>
+</div>
