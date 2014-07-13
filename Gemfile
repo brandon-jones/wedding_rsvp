@@ -38,6 +38,9 @@ gem 'kaminari'
 # pdf export
 gem 'prawn', '~> 1.1.0'
 
+gem 'rest-client', '~> 1.7.1'
+gem 'nokogiri', '~> 1.6.2.1'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -48,6 +51,7 @@ group :development do
   gem 'pry-rails'
   gem 'meta_request'
   gem 'faker', '~> 1.4.1'
+  gem 'awesome_print', '~> 1.2.0'
 end
 
 # Use ActiveModel has_secure_password

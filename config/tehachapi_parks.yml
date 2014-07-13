@@ -1,0 +1,17 @@
+defaults: &defaults
+  parks:
+    -
+      name: Philip Marx Central Park
+      address: Mojave and "E" Street, Tehachapi, CA, 93561
+      description:‎ Named after the founder of Tehachapi, CA, Philips Marx Central Park offers 5 acres of mature trees and manicured grass to enjoy picnics, toss a Frisbee, enjoy Music in the Park, celebrate the Tehachapi Oldtimers Reunion or the Tehachapi Mountain Festival! A central gazebo, picnic tables, barbeques, restrooms and playground are also available. Scout Hall, a community building located on south side of Central Park at 311 East D Street next to the public restrooms, is available for park programming, classes and special indoor events.
+      amenities: Bathrooms, 2 Playgrounds, Horseshoe pit, BBQ, Gazebo, Benches
+      image: 
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

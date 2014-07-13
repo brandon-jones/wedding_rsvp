@@ -1,0 +1,102 @@
+defaults: &defaults
+  hotels:
+    -
+      name: Fairfield Inn & Suites by Marriott Tehachapi
+      address: 422 W Tehachapi Blvd, Tehachapi, CA, 93561
+      phone: 1-866-573-4235
+      rating: 4
+      price: 99
+      link_to_reservation: http://www.marriott.com/hotels/travel/bflfi-fairfield-inn-and-suites-tehachapi
+      image: fairfield-marriott-hotel.jpg
+      logo: fairfield-marriott-logo.jpg
+    -
+      name: Holiday Inn Express Hotel & Suites Tehachapi
+      address: 901 Capital Hills Pkwy, Tehachapi, CA, 93561
+      phone: 1-661-822-9837
+      rating: 4
+      price: 97
+      link_to_reservation:  https://www.hiexpress.com/hotels/us/en/reservation/book?qAdlt=2&qBrs=6c.hi.ex.rs.ic.cp.in.sb.cw.cv&qChld=0&qCiD=20&qCiMy=062014&qCoD=21&qCoMy=062014&qDest=901+Capital+Hills+Pkwy+Tehachapi+California+United+States&qFRA=1&qGRM=0&qHtlC=TEHCA&qIta=99618783&qPSt=0&qRRSrt=rt&qRef=df&qRms=1&qRpn=1&qRpp=10&qRtP=6CBARC&qSHp=1&qSlH=TEHCA&qSmP=3&qSrt=sBR&qWch=0&qrtPt=102.99&srb_u=1&method=redirect&icdv=99618783&dp=true&cm_mmc=hpa_US_desktop_TEHCA_localuniversal_1_USD
+      image: hi-express-hotel.jpg
+      logo: hi-express-logo.jpg
+    -
+      name: La Quinta Inn Tehachapi
+      address: 500 E Steuber Rd, Tehachapi, CA, 93561
+      phone: 1-661-823-8000
+      rating: 3.5
+      price: 89
+      link_to_reservation: http://laquintatehachapi.com/
+      image: la-quinta-hotel.jpg
+      logo: la-quinta-logo.jpg
+    -
+      name: Best Western Mountain Inn
+      address: 418 W Tehachapi Blvd, Tehachapi, CA, 93561
+      phone: 1-661-822-5591
+      rating: 3.5
+      price: 114
+      link_to_reservation:  http://book.bestwestern.com/bestwestern/US/CA/Tehachapi-hotels/BEST-WESTERN-Mountain-Inn/Hotel-Overview.do?propertyCode=05424
+      image: bw-mountain-inn-hotel.jpg
+      logo: bw-mountain-inn-logo.jpg
+    -
+      name: Best Western Plus Country Park Hotel
+      address: 420 W Tehachapi Blvd, Tehachapi, CA, 93561
+      phone: 1-661-823-1800
+      rating: 3.5
+      price: 128
+      link_to_reservation: http://bestwesterncalifornia.com/hotels/best-western-plus-country-park-hotel
+      image: bw-country-park-hotel.jpg
+      logo: bw-country-park-logo.jpg
+    -
+      name: Stallion Springs Resort
+      address: 28681 Stallion Springs Dr, Tehachapi, CA, 93561
+      phone: 1-661-822-5400
+      rating: 3
+      price: 
+      link_to_reservation:
+      image: stallion-springs-resort-hotel.jpg
+      logo: stallion-springs-resort-logo.jpg
+    -
+      name: Santa Fe Motel
+      address: 120 W Tehachapi Blvd, Tehachapi, CA, 93561
+      phone: 1-661-822-3184
+      rating: 1
+      price: 70
+      link_to_reservation:
+      image: sante-fe-hotel.jpg
+      logo: sante-fe-logo.jpg
+    -
+      name: Ranch Hotel
+      address: 507 S Curry St, Tehachapi, CA, 93561
+      phone: 1-661-822-4283
+      rating: 2
+      price: 76
+      link_to_reservation:
+      image: rank-hotel.jpg
+      logo: rank-logo.jpg
+    -
+      name: Ranch House Motel
+      address: 500 E Tehachapi Blvd, Tehachapi, CA, 93561
+      phone: 1-661-822-4561
+      rating: 1
+      price: 
+      link_to_reservation:
+      image: ranch-house-hotel.jpg
+      logo: ranch-house-logo.jpg
+    -
+      name: Golden Hills Motel
+      address: 22561 Woodford Tehachapi Rd, Tehachapi, CA, 93561
+      phone: 1-661-822-4488
+      rating: 2
+      price: 64
+      link_to_reservation:
+      image: golden-hills-hotel.jpg
+      logo: golden-hills-hotel.jpg
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+

@@ -1,16 +1,12 @@
 class GuestbooksController < ApplicationController
   before_action :set_guestbook, only: [:show, :edit, :destroy]
-  http_basic_authenticate_with name: "dhh", password: "secret", only: :manage
+  before_action :authenticate, except: :index
+
   # GET /guestbooks
   # GET /guestbooks.json
   def index
     @guestbooks = Guestbook.all.reverse_order.page params[:page]
     @guestbook = Guestbook.new
-  end
-
-  # GET /guestbooks/1
-  # GET /guestbooks/1.json
-  def show
   end
 
   # GET /guestbooks/new
@@ -23,10 +19,6 @@ class GuestbooksController < ApplicationController
     Guestbook.generate_pdf
     # send_file "tmp/pdf/export.pdf", :type=>'text/pdf'
     redirect_to manage_guestbooks_path
-  end
-
-  # GET /guestbooks/1/edit
-  def edit
   end
 
   def flag
@@ -57,22 +49,18 @@ class GuestbooksController < ApplicationController
   def create
     @guestbook = Guestbook.new(guestbook_params)
 
-    respond_to do |format|
       if @guestbook.save
-        format.html { redirect_to guestbooks_path, notice: 'Message was left.' }
+        redirect_to guestbooks_path, notice: 'Message was left.'
       else
-        format.html { render action: 'new' }
+        render action: 'new'
       end
-    end
   end
 
   # DELETE /guestbooks/1
   # DELETE /guestbooks/1.json
   def destroy
     @guestbook.destroy
-    respond_to do |format|
-      format.html { redirect_to manage_guestbooks_path }
-    end
+    redirect_to manage_guestbooks_path
   end
 
   private

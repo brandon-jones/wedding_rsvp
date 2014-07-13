@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Zach and Katie Forever</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -7,18 +8,32 @@
   <%= csrf_meta_tags %>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
+
 <body>
+
 <div class="container">
-	<%= image_tag("zandk.jpg", :alt => "rss feed", :class => 'img-rounded', :id => 'top-image') %>
+	<div id='header' class="row">
+		<div class="span12">
+			<%= image_tag("zandk.jpg", :alt => "rss feed", :class => 'img-rounded', :id => 'top-image') %>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="span12">
+			<%= render partial: 'static_pages/top_bar' %>
+		</div>
+	</div>
+
 	<div class="row">
 		<div class="span2">
-			<%= render partial: 'static_pages/side_bar' %>
 		</div>
-		<div class="span10">
+		<div class="span8">
 			<% flash.each do |name, msg| -%>
 			  <%= content_tag :div, msg, class: name %>
 			<% end -%>
 			<%= yield %>
+		</div>
+		<div class="span2">
 		</div>
 	</div>
 </div>

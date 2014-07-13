@@ -1,0 +1,12 @@
+defaults: &defaults
+  name: zachatie
+  password: thepassword
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
