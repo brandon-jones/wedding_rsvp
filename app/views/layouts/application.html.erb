@@ -19,23 +19,18 @@
 	</div>
 
 	<div class="row">
-		<div class="span12">
-			<%= render partial: 'static_pages/top_bar' %>
+		<div class="span2">
+			<%= render partial: 'static_pages/side_bar' %>
 		</div>
-	</div>
 
-	<div class="row">
-		<div class="span2">
-		</div>
-		<div class="span8">
-			<% flash.each do |name, msg| -%>
-			  <%= content_tag :div, msg, class: name %>
-			<% end -%>
-			<%= yield %>
-		</div>
-		<div class="span2">
-		</div>
+	<div class="span10">
+		<% flash.each do |name, msg| -%>
+		  <%= content_tag :div, msg, class: name %>
+		<% end -%>
+		<%= yield %>
 	</div>
+	</div>
+		
 </div>
 
 </body>
