@@ -6,10 +6,6 @@
 	  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC2jnFNLoXJAeIG9Eo1qIWEGmZNhxf1Em8&q=500+E+Steuber+Rd+Tehachapi+CA,418+W+Tehachapi+Blvd">
 	</iframe>
 	</br>
-	<%= render partial: 'current_weather' %>
-	<%= render partial: 'weather_forcast' %>
-	<%= link_to('Hotels','tehachapi/hotels', id: 'hotels_js', remote: true) %>
-	<%= link_to('Restaurants','tehachapi/restaurants', id: 'restaurants_js', remote: true) %>
 	<div>
 		<% @hotels.each do |hotel| %>
 		  <h2><%= hotel['name'] %></h2>

@@ -10,26 +10,25 @@
 </head>
 
 <body>
-
-<div class="container">
+	<div id="content">
 	<div id='header' class="row">
 		<div class="span12">
 			<%= image_tag("zandk.jpg", :alt => "rss feed", :class => 'img-rounded', :id => 'top-image') %>
 		</div>
 	</div>
 
-	<div class="row">
+	<div id="side-bar" class="row">
 		<div class="span2">
 			<%= render partial: 'static_pages/side_bar' %>
 		</div>
 
-	<div class="span10">
+	<div id="main-body" class="span10">
 		<% flash.each do |name, msg| -%>
 		  <%= content_tag :div, msg, class: name %>
 		<% end -%>
 		<%= yield %>
 	</div>
-	</div>
+</div>
 		
 </div>
 

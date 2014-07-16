@@ -16,25 +16,6 @@ class StaticPagesController < ApplicationController
   	# @contact = { name: '', email: '', message: '' }
   end
 
-  def registry
-
-  end
-
-  def tehachapi
-    weather = Weather.new
-    @current_weather = weather.get_current
-    @weather_forcast = weather.get_forcast
-    @current_weather['description'] = weather.code_description(@current_weather['weatherCode'])
-  end
-
-  def restaurants
-    @restaurants = YAML.load_file("config/tehachapi_restaurants.yml")[Rails.env]['restaurants']
-  end
-
-  def hotels
-    @hotels = YAML.load_file("config/tehachapi_hotels.yml")[Rails.env]['hotels']
-  end
-
   def send_mail
   	if params && params[:name] && params[:email] && params[:message] && params[:subject]
   		if cookies[:sent_contact].present?
@@ -53,5 +34,9 @@ class StaticPagesController < ApplicationController
 		  end
   	end
   	return redirect_to(contact_path)
+  end
+
+  def testing
+    send_file '/assests/stylesheets/fonts/glyphicons-halflings-regular.woff'
   end
 end

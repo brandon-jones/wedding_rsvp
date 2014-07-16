@@ -10,6 +10,11 @@ WeddingRsvp::Application.routes.draw do
     get 'export', on: :collection
   end
 
+  resources :tehachapi, only: :index do
+    get 'hotels', on: :collection
+    get 'restaurants', on: :collection
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -20,10 +25,12 @@ WeddingRsvp::Application.routes.draw do
 
   post 'send_mail' => 'static_pages#send_mail' 
 
-  get 'tehachapi' => 'static_pages#tehachapi'
-  get 'hotels' => 'static_pages#hotels'
-  get 'restaurants' => 'static_pages#restaurants'
-  get 'registry' => 'static_pages#registry'
+  get 'fonts/glyphicons-halflings-regular.woff' => 'static_pages#testing'
+
+  # get 'tehachapi' => 'static_pages#tehachapi'
+  # get 'hotels' => 'static_pages#hotels'
+  # get 'restaurants' => 'static_pages#restaurants'
+  # get 'registry' => 'static_pages#registry'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
