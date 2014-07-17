@@ -10,70 +10,50 @@
  *
  *= require_self
  *= require_tree .
+ *= require bootstrap
  */
 
 #top-image {
 	display: block;
 	margin-left: auto;
   margin-right: auto;
-	width:15%;
+	width:50%;
+	padding-top: 5px;
 }
 
-.border-box {
-    box-sizing: border-box;
+.carousel {
+	width:700px;
+	height:300px;
 }
-.ribbon {
-	 font-size: 16px !important;
-	 /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
 
-	 width: 85%;
-	    
-	position: relative;
-	background-color: #fafafa;
-	background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
-	background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
-	background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
-	background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
-	background-repeat: repeat-x;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
-	border: 1px solid #d4d4d4;
-	color: #fff;
-	text-align: center;
-	padding: 1em 2em; /* Adjust to suit */
-	margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+body {
+	background: #00ffff url('background4.png');
 }
-.ribbon:before, .ribbon:after {
- content: "";
- position: absolute;
- display: block;
- bottom: -1em;
- border: 2em solid #f2f2f2; /*side ribbons*/
- z-index: -1;
+
+#sidebar {
+	background: none;
+	border: none;
 }
-.ribbon:before {
- left: -2.7em;
- border-right-width: 1.5em;
- border-left-color: transparent;
+
+#main-body {
+	background: #0015ff url('background_white.png');
+	padding: 20px;
+	border: 1px solid;
+  border-radius: 25px;
+  min-height:30em;
 }
-.ribbon:after {
- right: -2.7em;
- border-left-width: 5em;
- border-right-color: transparent;
+
+#header {
+	height:32em;
 }
-.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
- content: "";
- position: absolute;
- display: block;
- border-style: solid;
- border-color: #e2e2e2 transparent transparent transparent;
- bottom: -1em;
+
+#content {
+	margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 100px;
+  width: 85%;
 }
-.ribbon .ribbon-content:before {
- left: 0;
- border-width: 1em 0 0 1em;
-}
-.ribbon .ribbon-content:after {
- right: 0;
- border-width: 1em 1em 0 0;
+
+#sunflower {
 }

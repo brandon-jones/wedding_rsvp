@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>Zach and Katie Forever</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-</head>
+	<head>
+	  <title>Zach and Katie Forever</title>
+	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <%= csrf_meta_tags %>
+	  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
 
-<body>
+	<body>
+		<div id="content">
+			<div id='header' class="row">
+				<div class="col-md-12">
+					<%= image_tag("2.png", :alt => "banner", :id => 'top-image') %>
+				</div>
+			</div>
 
-<div class="container">
-	<div id='header' class="row">
-		<div class="span12">
-			<%= image_tag("zandk.jpg", :alt => "rss feed", :class => 'img-rounded', :id => 'top-image') %>
+			<div class="row">
+		  	<div class="col-sm-3">
+		    	<div class="well bs-sidebar" id="sidebar">
+		      	<%= render partial: 'static_pages/side_bar' %>
+						<%= image_tag("sunflowermirror.png", :alt => "sunflower", :id => 'sunflower') %>
+		    	</div> <!--well bs-sidebar affix-->
+		  	</div> <!--col-sm-3-->
+		  	<div class="col-sm-9">
+		    	<div id="main-body">
+						<% flash.each do |name, msg| -%>
+				  		<%= content_tag :div, msg, class: name %>
+						<% end -%>
+						<%= yield %>
+					</div>
+		  	</div> <!--col-sm-9-->
+			</div> <!--row-->
 		</div>
-	</div>
 
-	<div class="row">
-		<div class="span12">
-			<%= render partial: 'static_pages/top_bar' %>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="span2">
-		</div>
-		<div class="span8">
-			<% flash.each do |name, msg| -%>
-			  <%= content_tag :div, msg, class: name %>
-			<% end -%>
-			<%= yield %>
-		</div>
-		<div class="span2">
-		</div>
-	</div>
-</div>
-
-</body>
+	</body>
 </html>
