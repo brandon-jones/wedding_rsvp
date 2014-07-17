@@ -17,31 +17,43 @@
 	display: block;
 	margin-left: auto;
   margin-right: auto;
-	width:15%;
+	width:50%;
+	padding-top: 5px;
 }
 
-#carousel-example-generic {
+.carousel {
 	width:700px;
 	height:300px;
 }
 
 body {
-	background: #00ffff url('background.png');
+	background: #00ffff url('background4.png');
 }
 
-#side-bar {
-	background: #00ff04;
+#sidebar {
+	background: none;
+	border: none;
 }
 
 #main-body {
-	background: #0015ff;
+	background: #0015ff url('background_white.png');
+	padding: 20px;
+	border: 1px solid;
+  border-radius: 25px;
+  min-height:30em;
 }
 
 #header {
-	background: #ff0000;
-	height:30em;
+	height:32em;
 }
 
 #content {
-	margin: 100px 100px;
+	margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 100px;
+  width: 85%;
+}
+
+#sunflower {
 }

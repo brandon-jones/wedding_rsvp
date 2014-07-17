@@ -36,7 +36,4 @@ class StaticPagesController < ApplicationController
   	return redirect_to(contact_path)
   end
 
-  def testing
-    send_file '/assests/stylesheets/fonts/glyphicons-halflings-regular.woff'
-  end
 end

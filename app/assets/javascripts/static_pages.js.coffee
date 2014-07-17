@@ -1,3 +1,5 @@
 $(document).ready ->
-	$('.carousel').carousel()
+
+  $('.carousel').carousel()
+      
 return

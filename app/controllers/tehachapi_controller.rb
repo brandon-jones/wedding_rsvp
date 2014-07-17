@@ -8,9 +8,8 @@ class TehachapiController < ApplicationController
   def index
     weather = Weather.new
     @current_weather = weather.get_current
-    @weather_forcast = weather.get_forcast
     @current_weather['description'] = weather.code_description(@current_weather['weatherCode'])
-    @hotels = YAML.load_file("config/tehachapi_hotels.yml")[Rails.env]['hotels']
+    @weather_forcast = weather.get_forcast
   end
 
   def restaurants
@@ -19,6 +18,7 @@ class TehachapiController < ApplicationController
 
   def hotels
     @hotels = YAML.load_file("config/tehachapi_hotels.yml")[Rails.env]['hotels']
+    render partial: 'hotel_listing'
   end
  
 end

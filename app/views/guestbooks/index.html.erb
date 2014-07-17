@@ -1,29 +1,30 @@
+<p>
+  <h1 class="text-center">The Guestbook</h1>
+  <span class="text-right">
+    <%= link_to('Admin', manage_guestbooks_path) %>
+  </span>
+</p>
 
-<h1>The Guestbook</h1>
-<%= link_to('Admin', manage_guestbooks_path) %>
 <%= render partial: 'form' %>
+<div class="pagination">
+  <%= paginate @guestbooks %>
+</div>
 
-<%= paginate @guestbooks %>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Created on</th>
-      <th>Message</th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @guestbooks.each do |guestbook| %>
-      <tr>
-        <td><%= guestbook.name %></td>
-        <td><%= guestbook.created_at.to_formatted_s(:short) %></td>
-        <td><%= guestbook.message %></td>
-        <td title="Click to report"><%= flag_status(guestbook)%></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @guestbooks.each do |guestbook| %>
+<div class="guestbook-message">
+  <div class="row-fluid">
+    <div class"span12">
+      <div class="row-fluid">
+        <div class="span1"><%= flag_status(guestbook)%></div>
+        <div class="span9"><b><%= guestbook.name %></b></div>
+        <div class="span2"><%= guestbook.created_at.to_formatted_s(:short) %></div>
+      </div>
+      <div class="row-fluid"> 
+        <div class="span12"><%= guestbook.message %></div>
+      </div>
+    </div>
+  </div>
+</div> 
+<% end %>
 
 <br>

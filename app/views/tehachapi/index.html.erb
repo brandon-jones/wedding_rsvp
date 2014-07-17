@@ -1,22 +1,14 @@
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <li class="active"><a href="#home" role="tab" data-toggle="tab">Tehachapi</a></li>
-  <li><a href="#profile" role="tab" data-toggle="tab">Hotels</a></li>
-  <li><a href="#messages" role="tab" data-toggle="tab">Resturants</a></li>
-  <li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+<ul class="nav nav-pills">
+  <li class="active tehachapi-pills" id="about_tehachapi_js"><a href="#">About Tehahacpi</a></li>
+  <li><a class="tehachapi-pills" href="#" id="hotels_js">Hotels</a></li>
+  <li><a class="tehachapi-pills" href="#" id="restaurants_js">Restaurants</a></li>
 </ul>
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <div class="tab-pane active" id="home">
-		<div class="results">
-		</div>
-	</div>
-  <div class="tab-pane" id="hotels">
-  	<%= render partial: 'hotel_listing' %>
-  </div>
-  <div class="tab-pane" id="messages">
-			<%= render partial: 'current_weather' %>
-			<%= render partial: 'weather_forcast' %></div>
-  <div class="tab-pane" id="settings">works</div>
+<div id="results">
+  <%= render partial: 'weather' %>
+
+</br>
+Tehachapi is located outside of Southern California’s congested highly populated areas and outside of the drier hotter deserts and valleys surrounding it. Tehachapi is like a breath of fresh air. Our higher elevation and mountain locale epitomizes outdoor living at its best. People here, whether resident or visitor relish their time spent outside enjoying the scenic beauty and all the recreational opportunities, extreme sports and wildlife the area has to offer. 
+
+But Tehachapi’s unique environment also means it’s located outside the mainstream and conventions of suburbia. It’s original. More unconventional attitude attracts people with fresh ideas and energy that manifest themselves in the arts, culture, traditions, technology and commercial innovations, and strong community spirit.
 </div>

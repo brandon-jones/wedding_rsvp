@@ -25,7 +25,7 @@ WeddingRsvp::Application.routes.draw do
 
   post 'send_mail' => 'static_pages#send_mail' 
 
-  get 'fonts/glyphicons-halflings-regular.woff' => 'static_pages#testing'
+  get 'registry' => 'static_pages#registry'
 
   # get 'tehachapi' => 'static_pages#tehachapi'
   # get 'hotels' => 'static_pages#hotels'
