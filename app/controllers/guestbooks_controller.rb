@@ -1,6 +1,6 @@
 class GuestbooksController < ApplicationController
   before_action :set_guestbook, only: [:show, :edit, :destroy]
-  before_action :authenticate, except: [:index, :flag]
+  before_action :authenticate, except: [:index, :flag, :create]
 
   # GET /guestbooks
   # GET /guestbooks.json

@@ -1,0 +1,26 @@
+.hotel-list {
+	padding: 10px 10px;
+	margin: 20px 20px;
+	background-color: white;
+	border: 1px solid;
+  border-radius: 25px;
+}
+
+.warning {
+	color: red;
+}
+
+#top-nav-bar {
+	border: 1px solid;
+  border-radius: 10px;
+  background-image:url('yellow_polka_dot.png');
+}
+
+.buttons-mine{
+	background-color: transparent;
+	border: none;
+}
+
+.buttons-mine:hover{
+	opacity:0.5;
+}

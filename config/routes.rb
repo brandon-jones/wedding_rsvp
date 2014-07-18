@@ -1,4 +1,6 @@
 WeddingRsvp::Application.routes.draw do
+  resources :rsvps
+
   resources :blogs , except: [ :show, :update, :new ] do
     get 'manage', on: :collection
   end
@@ -8,11 +10,6 @@ WeddingRsvp::Application.routes.draw do
     get 'flag', on: :member
     get 'approve', on: :member
     get 'export', on: :collection
-  end
-
-  resources :tehachapi, only: :index do
-    get 'hotels', on: :collection
-    get 'restaurants', on: :collection
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -26,6 +23,8 @@ WeddingRsvp::Application.routes.draw do
   post 'send_mail' => 'static_pages#send_mail' 
 
   get 'registry' => 'static_pages#registry'
+
+  get 'hotels' => 'static_pages#hotels'
 
   # get 'tehachapi' => 'static_pages#tehachapi'
   # get 'hotels' => 'static_pages#hotels'
