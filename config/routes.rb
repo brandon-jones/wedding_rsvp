@@ -26,6 +26,8 @@ WeddingRsvp::Application.routes.draw do
 
   get 'hotels' => 'static_pages#hotels'
 
+  post 'rsvps/create' => 'rsvps#create'
+
   # get 'tehachapi' => 'static_pages#tehachapi'
   # get 'hotels' => 'static_pages#hotels'
   # get 'restaurants' => 'static_pages#restaurants'

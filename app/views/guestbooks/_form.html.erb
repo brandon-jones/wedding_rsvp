@@ -1,30 +1,37 @@
-<div id="guestbook-form">
-<form class="form-horizontal" role="form">
-  <div class="form-group">
-    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+<div class="container-fluid">
+  <div class="row">
+    <div class="my-form">
+
+
+      <% if @guestbook.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@guestbook.errors.count, "error") %> prohibited this entry from being saved:</h2>
+
+          <ul>
+          <% @guestbook.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+          
+        </div>
+      <% end %>
+
+
+      <%= form_for(@guestbook, html: {role: 'form' }) do |f| %>
+
+        <div class="field control-label form-group" >
+          <%= f.label :name %>
+          <%= f.text_field :name, required: '', class: 'form-control'  %>
+        </div>
+        <div class="field control-label form-group" >
+          <%= f.label :message %>
+          <small>Please leave a message for the happy couple</small>
+          <%= f.text_area :message, required: '', class: 'form-control', rows: '5' %>
+          </br>
+        <div class="actions form-group">
+          <%= f.submit 'Leave Message', class: "btn btn-default" %>
+        </div>
+      <% end %>
     </div>
   </div>
-  <div class="form-group">
-    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-    <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <div class="checkbox">
-        <label>
-          <input type="checkbox"> Remember me
-        </label>
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Sign in</button>
-    </div>
-  </div>
-</form>
 </div>

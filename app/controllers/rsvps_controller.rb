@@ -1,6 +1,7 @@
 class RsvpsController < ApplicationController
   before_action :set_rsvp, only: [:show, :edit, :update, :destroy]
   before_action :authenticate, except: [:new, :create]
+  skip_before_filter :verify_authenticity_token  
 
   # GET /rsvps
   # GET /rsvps.json
@@ -28,7 +29,7 @@ class RsvpsController < ApplicationController
     @rsvp = Rsvp.new(rsvp_params)
 
       if @rsvp.save
-        redirect_to @rsvp, notice: 'Rsvp was successfully created.'
+        redirect_to root_path, notice: 'Rsvp was successfully created.'
       else
         render action: 'new'
       end

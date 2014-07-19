@@ -14,10 +14,11 @@
 
 	<body>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<div id="content">
+
+		<div id="content" class="container">
 			<div id='header' class="row">
 				<div class="col-md-12">
-					<%= image_tag("2.png", :alt => "banner", :id => 'top-image') %>
+					<%= image_tag("2.png", :alt => "banner", :id => 'top-image', class: 'img-responsive') %>
 				</div>
 			</div>
 
@@ -28,14 +29,20 @@
 				</div>
 			</div>
 
-			<div id='header' class="row">
+			<div id="main-body" class="row">
 				<div class="col-md-12">
-					<div id="main-body">
+					<div >
 						<% flash.each do |name, msg| -%>
 				  		<%= content_tag :div, msg, class: name %>
 						<% end -%>
 						<%= yield %>
 					</div>
+				</div>
+			</div>
+
+			<div id="footer" class="row">
+				<div class="col-md-12">
+					<%= image_tag("elephants.png", :alt => "banner", :id => 'top-image', class: 'img-responsive') %>
 				</div>
 			</div>
 

@@ -40,22 +40,6 @@ defaults: &defaults
       link_to_reservation: http://bestwesterncalifornia.com/hotels/best-western-plus-country-park-hotel
       image: bw-country-park-hotel.jpg
       logo: bw-country-park-logo.jpg
-    -
-      name: Santa Fe Motel
-      address: 120 W Tehachapi Blvd, Tehachapi, CA, 93561
-      phone: 1-661-822-3184
-      rating: 1
-      link_to_reservation:
-      image: sante-fe-hotel.jpg
-      logo: sante-fe-logo.jpg
-    -
-      name: Ranch Hotel
-      address: 507 S Curry St, Tehachapi, CA, 93561
-      phone: 1-661-822-4283
-      rating: 2
-      link_to_reservation:
-      image: rank-hotel.jpg
-      logo: rank-logo.jpg
 
 development:
   <<: *defaults
