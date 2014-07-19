@@ -27,7 +27,7 @@
 }
 
 body {
-	background: #00ffff url('background4.png');
+	background: #c9c9c9 url('background4.png');
 }
 
 #sidebar {
@@ -36,7 +36,7 @@ body {
 }
 
 #main-body {
-	background: #0015ff url('newbackground.png');
+	background: #c9c9c9 url('newbackground.png');
 	padding: 20px 20px 40px 20px;
 	border: 1px solid;
   border-radius: 25px;
