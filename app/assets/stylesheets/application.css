@@ -8,6 +8,8 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require bootstrap.min
+ *= require my_styles
  *= require_self
  *= require_tree .
  */
@@ -16,5 +18,45 @@
 	display: block;
 	margin-left: auto;
   margin-right: auto;
-	width:15%;
+	padding-top: 5px;
+}
+
+.carousel {
+	width:700px;
+	height:300px;
+}
+
+body {
+	background: #c9c9c9 url('background4.png');
+}
+
+#sidebar {
+	background: none;
+	border: none;
+}
+
+#main-body {
+	background: #c9c9c9 url('newbackground.png');
+	padding: 20px 20px 40px 20px;
+	border: 1px solid;
+  border-radius: 25px;
+  min-height:30em;
+}
+
+#header {
+}
+
+#content {
+	margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 100px;
+  width: 85%;
+}
+
+#sunflower {
+}
+
+#btn {
+	background-color: red;
 }

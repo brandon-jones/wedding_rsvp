@@ -1,0 +1,92 @@
+.button-grouping {
+	background-color: transparent;
+}
+
+div.my-form {
+	background-color: white;
+	padding: 20px 20px;
+  border-radius: 10px;
+  width:40%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+img.my-images {
+	margin-left: auto;
+  margin-right: auto;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+
+.white-background {
+	background-color: white;
+	border-radius: 5px;
+}
+
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+}
+
+nav.pagination{
+	background-color: white;
+	border-radius: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.page {
+	padding: 10px 10px;
+	font-size: 1.2em;
+}
+
+a {
+	color: black;
+}
+a:hover
+{ 
+	color:black;
+	background-color: #c9c9c9;
+}
+
+.page.current {
+	color:grey;
+}
+/*
+.body-title {
+	height: 1.5em;
+	border-radius: 5px;
+	background-color: white;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+  font-size: 2em;
+
+}*/
+
+.warning {
+	width: 80%;
+	margin-left: auto;
+  margin-right: auto;
+}
+
+#rsvp_party_size {
+	width: 40%;
+	margin-left: auto;
+  margin-right: auto;
+}
+
+#hotel-welcome {
+	padding: 20px 30px;
+}
+
+#footer-image{
+	width:10%; /* you can use % */
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}

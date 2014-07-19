@@ -1,0 +1,19 @@
+<p>
+  <h1 class="text-center">Guestbook</h1>
+  <div align="right">
+    <%= link_to('Admin', manage_guestbooks_path) %>
+  </div>
+</p>
+
+<%= render partial: 'form' %>
+
+<%= paginate @guestbooks %>
+
+<% @guestbooks.each do |guestbook| %>
+  <div class="guestbook-message container-fluid">
+    <div title="Report for inapropriate content"><%= flag_status(guestbook)%></div>
+    <div><b><%= guestbook.name %></b></div>
+    <div><i><%= guestbook.created_at.to_formatted_s(:short) %></i></div>
+    <div><%= guestbook.message %></div>
+  </div>
+<% end %>

@@ -1,0 +1,18 @@
+<div align="center">
+<h1>Managing Guestbook</h1>
+</div>
+<div align="right">
+<%= link_to('Export', export_guestbooks_path) %>
+</div>
+
+<br/>
+<% if @flagged.count > 0 %>
+	<h3>Flagged Messages</h3>
+	<%= render 'table', :post => @flagged %>
+	<br/>
+<% end %>
+
+	<h3>All Messages</h3>
+<%= paginate @guestbooks %>
+<%= render 'table', :post => @guestbooks %>
+<br>

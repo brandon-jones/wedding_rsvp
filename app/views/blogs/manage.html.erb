@@ -1,0 +1,31 @@
+<h1>New Blog</h1>
+
+<%= render partial: 'form' %>
+
+<h1>Managing Listing blogs</h1>
+<%= paginate @blogs %>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Created on</th>
+      <th>Body</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= blog.title %></td>
+        <td><%= blog.created_at.to_formatted_s(:short) %></td>
+        <td><%= blog.body %></td>
+        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
