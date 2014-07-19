@@ -28,9 +28,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # twitter bootstrap
-gem "therubyracer"
-gem "less-rails"
-gem 'twitter-bootstrap-rails'
+# gem "therubyracer"
+# gem "less-rails"
+# gem 'twitter-bootstrap-rails'
 
 #pagenation
 gem 'kaminari'

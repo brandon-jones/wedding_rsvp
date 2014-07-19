@@ -16,6 +16,10 @@ class StaticPagesController < ApplicationController
   	# @contact = { name: '', email: '', message: '' }
   end
 
+  def hotels
+    @hotels = YAML.load_file("config/tehachapi_hotels.yml")[Rails.env]['hotels']
+  end
+
   def send_mail
   	if params && params[:name] && params[:email] && params[:message] && params[:subject]
   		if cookies[:sent_contact].present?

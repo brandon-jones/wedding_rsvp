@@ -16,4 +16,10 @@ namespace :fill do
     end
   end
 
+  task :rsvp => :environment do
+    for i in 0..100
+      puts i
+      Rsvp.create(name: Faker::Name.name, contact: [Faker::Internet.email,Faker::PhoneNumber.phone_number].sample, attending: [true,false].sample, party_size: rand(1..9))
+    end
+  end
 end

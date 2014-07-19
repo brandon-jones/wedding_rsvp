@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 	<head>
-	  <title>Zach and Katie Forever</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>Zack and Katie Forever</title>
 	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 	  <%= csrf_meta_tags %>
@@ -10,30 +13,39 @@
 	</head>
 
 	<body>
-		<div id="content">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+		<div id="content" class="container">
 			<div id='header' class="row">
 				<div class="col-md-12">
-					<%= image_tag("2.png", :alt => "banner", :id => 'top-image') %>
+					<%= image_tag("2.png", :alt => "banner", :id => 'top-image', class: 'img-responsive') %>
 				</div>
 			</div>
 
-			<div class="row">
-		  	<div class="col-sm-3">
-		    	<div class="well bs-sidebar" id="sidebar">
-		      	<%= render partial: 'static_pages/side_bar' %>
-						<%= image_tag("sunflowermirror.png", :alt => "sunflower", :id => 'sunflower') %>
-		    	</div> <!--well bs-sidebar affix-->
-		  	</div> <!--col-sm-3-->
-		  	<div class="col-sm-9">
-		    	<div id="main-body">
+			<div id='top-bar' class="row">
+				<div class="col-md-12">
+					<%= render partial: 'static_pages/top_bar' %>
+						<!-- <%= image_tag("sunflowermirror.png", :alt => "sunflower", :id => 'sunflower') %> -->
+				</div>
+			</div>
+
+			<div id="main-body" class="row">
+				<div class="col-md-12">
+					<div >
 						<% flash.each do |name, msg| -%>
 				  		<%= content_tag :div, msg, class: name %>
 						<% end -%>
 						<%= yield %>
 					</div>
-		  	</div> <!--col-sm-9-->
-			</div> <!--row-->
-		</div>
+				</div>
+			</div>
 
+			<div id="footer" class="row">
+				<div class="col-md-12">
+					<%= image_tag("elephants.png", :alt => "banner", :id => 'top-image', class: 'img-responsive', id: 'footer-image') %>
+				</div>
+			</div>
+
+		</div>
 	</body>
 </html>

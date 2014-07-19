@@ -1,5 +1,5 @@
 defaults: &defaults
-  name: zachatie
+  name: zackatie
   password: thepassword
 
 development:
