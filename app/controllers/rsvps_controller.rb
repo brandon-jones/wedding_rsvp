@@ -27,7 +27,7 @@ class RsvpsController < ApplicationController
   # POST /rsvps.json
   def create
     @rsvp = Rsvp.new(rsvp_params)
-
+binding.pry
       if @rsvp.save
         redirect_to root_path, notice: 'Rsvp was successfully created.'
       else
