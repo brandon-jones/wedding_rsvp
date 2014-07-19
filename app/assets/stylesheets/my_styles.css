@@ -36,6 +36,7 @@ nav.pagination{
 	border-radius: 5px;
 	padding-left: 10px;
 	padding-right: 10px;
+	min-height:20px;
 }
 
 .page {
