@@ -82,3 +82,11 @@ a:hover
 #hotel-welcome {
 	padding: 20px 30px;
 }
+
+#footer-image{
+	width:10%; /* you can use % */
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}

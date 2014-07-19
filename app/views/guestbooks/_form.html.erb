@@ -2,20 +2,16 @@
   <div class="row">
     <div class="my-form">
 
-
       <% if @guestbook.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@guestbook.errors.count, "error") %> prohibited this entry from being saved:</h2>
-
           <ul>
-          <% @guestbook.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
+            <% @guestbook.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
           </ul>
-          
         </div>
       <% end %>
-
 
       <%= form_for(@guestbook, html: {role: 'form' }) do |f| %>
 
@@ -23,15 +19,19 @@
           <%= f.label :name %>
           <%= f.text_field :name, required: '', class: 'form-control'  %>
         </div>
+
         <div class="field control-label form-group" >
           <%= f.label :message %>
           <small>Please leave a message for the happy couple</small>
           <%= f.text_area :message, required: '', class: 'form-control', rows: '5' %>
-          </br>
+        </div>
+
         <div class="actions form-group">
           <%= f.submit 'Leave Message', class: "btn btn-default" %>
         </div>
+
       <% end %>
+
     </div>
   </div>
 </div>
