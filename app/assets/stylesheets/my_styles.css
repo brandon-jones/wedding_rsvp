@@ -21,9 +21,11 @@ div.my-home-form {
   text-align: center;
 }
 
-div.image-carousel {
+div.carousel {
 	margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 img.my-images {
