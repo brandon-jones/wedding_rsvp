@@ -11,6 +11,20 @@ div.my-form {
   margin-right: auto;
   text-align: center;
 }
+div.my-home-form {
+	background-color: white;
+	padding: 20px 20px;
+  border-radius: 10px;
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+div.image-carousel {
+	margin-left: auto;
+  margin-right: auto;
+}
 
 img.my-images {
 	margin-left: auto;
