@@ -11,6 +11,22 @@ div.my-form {
   margin-right: auto;
   text-align: center;
 }
+div.my-home-form {
+	background-color: white;
+	padding: 20px 20px;
+  border-radius: 10px;
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+div.carousel {
+	margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
 
 img.my-images {
 	margin-left: auto;
@@ -36,6 +52,7 @@ nav.pagination{
 	border-radius: 5px;
 	padding-left: 10px;
 	padding-right: 10px;
+	min-height:20px;
 }
 
 .page {
@@ -89,4 +106,8 @@ a:hover
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+}
+
+#user-form{
+	margin-top: 20px;
 }

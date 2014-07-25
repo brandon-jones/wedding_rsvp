@@ -1,3 +1,3 @@
 $(document).ready ->
-  $('.carousel').carousel()
+  $(".carousel").carousel interval: 2000
 return

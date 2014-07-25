@@ -4,7 +4,7 @@ class CreateRsvps < ActiveRecord::Migration
       t.string :name
       t.string :contact
       t.boolean :attending
-      t.integer :party_size
+      t.integer :party_size, :default => 0
 
       t.timestamps
     end

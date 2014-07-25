@@ -17,17 +17,18 @@ class RsvpsController < ApplicationController
   # GET /rsvps/new
   def new
     @rsvp = Rsvp.new
+    @default_value = 0
   end
 
   # GET /rsvps/1/edit
   def edit
+    @default_value = @rsvp.party_size
   end
 
   # POST /rsvps
   # POST /rsvps.json
   def create
     @rsvp = Rsvp.new(rsvp_params)
-
       if @rsvp.save
         redirect_to root_path, notice: 'Rsvp was successfully created.'
       else
@@ -39,7 +40,7 @@ class RsvpsController < ApplicationController
   # PATCH/PUT /rsvps/1.json
   def update
       if @rsvp.update(rsvp_params)
-        redirect_to @rsvp, notice: 'Rsvp was successfully updated.'
+        redirect_to root_path, notice: 'Rsvp was successfully updated.'
       else
         render action: 'edit'
       end

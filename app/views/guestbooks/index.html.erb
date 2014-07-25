@@ -9,6 +9,7 @@
 
 <%= paginate @guestbooks %>
 
+<div id="user-form">
 <% @guestbooks.each do |guestbook| %>
   <div class="guestbook-message container-fluid">
     <div title="Report for inapropriate content"><%= flag_status(guestbook)%></div>
@@ -17,3 +18,4 @@
     <div><%= guestbook.message %></div>
   </div>
 <% end %>
+</div>
