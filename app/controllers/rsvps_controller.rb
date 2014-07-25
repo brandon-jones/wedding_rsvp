@@ -39,7 +39,7 @@ class RsvpsController < ApplicationController
   # PATCH/PUT /rsvps/1.json
   def update
       if @rsvp.update(rsvp_params)
-        redirect_to @rsvp, notice: 'Rsvp was successfully updated.'
+        redirect_to root_path, notice: 'Rsvp was successfully updated.'
       else
         render action: 'edit'
       end

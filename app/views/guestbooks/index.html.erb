@@ -1,9 +1,8 @@
-<p>
-  <h1 class="text-center">Guestbook</h1>
-  <div align="right">
-    <%= link_to('Admin', manage_guestbooks_path) %>
-  </div>
-</p>
+
+<h1 class="text-center">Guestbook</h1>
+<div align="right">
+  <p><%= link_to('Admin', manage_guestbooks_path) %></p>
+</div>
 
 <%= render partial: 'form' %>
 
@@ -11,9 +10,9 @@
 
 <% @guestbooks.each do |guestbook| %>
   <div class="guestbook-message container-fluid">
-    <div title="Report for inapropriate content"><%= flag_status(guestbook)%></div>
-    <div><b><%= guestbook.name %></b></div>
-    <div><i><%= guestbook.created_at.to_formatted_s(:short) %></i></div>
-    <div><%= guestbook.message %></div>
+    <div title="Report for inapropriate content"><p><%= flag_status(guestbook)%></p></div>
+    <div><b><p><%= guestbook.name %></p></b></div>
+    <div><i><p><%= guestbook.created_at.to_formatted_s(:short) %></p></i></div>
+    <div><p><%= guestbook.message %></p></div>
   </div>
 <% end %>
