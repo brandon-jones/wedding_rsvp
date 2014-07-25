@@ -43,18 +43,12 @@ body {
   min-height:30em;
 }
 
-#header {
-}
-
 #content {
 	margin-left: auto;
   margin-right: auto;
   margin-top: 5px;
   margin-bottom: 100px;
   width: 85%;
-}
-
-#sunflower {
 }
 
 #btn {
