@@ -26,6 +26,12 @@ div.carousel {
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 40px;
+  width: 480px;
+  height: 640px;
+}
+
+h1 {
+	font-family: "alger";
 }
 
 img.my-images {
@@ -39,12 +45,6 @@ img.my-images {
 .white-background {
 	background-color: white;
 	border-radius: 5px;
-}
-
-
-@font-face {
-    font-family: myFirstFont;
-    src: url(sansation_light.woff);
 }
 
 nav.pagination{
@@ -108,6 +108,29 @@ a:hover
   margin-top: 20px;
 }
 
-#user-form{
-	margin-top: 20px;
+p {
+	font-family: "goudos";
+}
+
+@font-face {
+	font-family: "alger";
+	src: asset-url(/assets/fonts/ALGER.TTG);
+}
+
+@font-face {
+	font-family: "goudos";
+	src: asset-url(/assets/fonts/GOUDOS.TTG);
+}
+
+.font-large {
+	font-size:1.8em;
+	margin: 0px 0px 0px 0px;
+}
+
+.font-medium {
+	font-size:1.2em;
+}
+
+#guestbook-form {
+	padding: 20px 20px;
 }

@@ -4,10 +4,10 @@
 <table class="table table-striped table-bordered table-hover">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Contact</th>
-      <th>Attending</th>
-      <th>Party size</th>
+      <th><%= link_to('Name',rsvps_path(:order_by => 'name')) %></th>
+      <th><%= link_to('Contact',rsvps_path(:order_by => 'contact')) %></th>
+      <th><%= link_to('Attending',rsvps_path(:order_by => 'attending')) %></th>
+      <th><%= link_to('Name',rsvps_path(:order_by => 'party_size')) %></th>
       <th></th>
       <th></th>
     </tr>
@@ -16,12 +16,12 @@
   <tbody>
     <% @rsvps.each do |rsvp| %>
       <tr>
-        <td><%= rsvp.name %></td>
-        <td><%= rsvp.contact %></td>
-        <td><%= rsvp.attending %></td>
-        <td><%= rsvp.party_size %></td>
-        <td><%= link_to 'Edit', edit_rsvp_path(rsvp) %></td>
-        <td><%= link_to 'Destroy', rsvp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><p><%= rsvp.name %></p></td>
+        <td><p><%= rsvp.contact %></p></td>
+        <td><p><%= rsvp.attending %></p></td>
+        <td><p><%= rsvp.party_size %></p></td>
+        <td><p><%= link_to 'Edit', edit_rsvp_path(rsvp) %></p></td>
+        <td><p><%= link_to 'Destroy', rsvp, method: :delete, data: { confirm: 'Are you sure?' } %></p></td>
       </tr>
     <% end %>
   </tbody>
