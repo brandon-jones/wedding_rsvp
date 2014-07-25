@@ -27,7 +27,7 @@
 }*/
 
 body {
-	background: #c9c9c9 asset-urlurl('background4.png');
+	background: #c9c9c9 asset-url('background4.png');
 }
 
 #sidebar {
