@@ -30,9 +30,9 @@ div.carousel {
   height: 640px;
 }
 
-h1 {
+/*h1 {
 	font-family: "alger";
-}
+}*/
 
 img.my-images {
 	margin-left: auto;
@@ -107,11 +107,11 @@ a:hover
   margin-right: auto;
   margin-top: 20px;
 }
-
+/*
 p {
 	font-family: "goudos";
 }
-
+*/
 /*@font-face {
 	font-family: "alger";
 	src: asset-url(/assets/fonts/ALGER.TTG);
