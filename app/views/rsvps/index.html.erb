@@ -4,10 +4,10 @@
 <table class="table table-striped table-bordered table-hover">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Contact</th>
-      <th>Attending</th>
-      <th>Party size</th>
+      <th><%= link_to('Name',rsvps_path(:order_by => 'name')) %></th>
+      <th><%= link_to('Contact',rsvps_path(:order_by => 'contact')) %></th>
+      <th><%= link_to('Attending',rsvps_path(:order_by => 'attending')) %></th>
+      <th><%= link_to('Name',rsvps_path(:order_by => 'party_size')) %></th>
       <th></th>
       <th></th>
     </tr>
