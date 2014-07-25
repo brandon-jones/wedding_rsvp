@@ -112,7 +112,7 @@ p {
 	font-family: "goudos";
 }
 
-@font-face {
+/*@font-face {
 	font-family: "alger";
 	src: asset-url(/assets/fonts/ALGER.TTG);
 }
@@ -120,7 +120,7 @@ p {
 @font-face {
 	font-family: "goudos";
 	src: asset-url(/assets/fonts/GOUDOS.TTG);
-}
+}*/
 
 .font-large {
 	font-size:1.8em;
