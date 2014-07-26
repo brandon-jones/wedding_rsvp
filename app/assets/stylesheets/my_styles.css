@@ -114,12 +114,12 @@ h1 {
 
 @font-face {
 	font-family: "alger";
-	src: font-url("/assets/fonts/ALGER.TTG");
+	src: url("/assets/fonts/ALGER.TTG");
 }
 
 @font-face {
 	font-family: "goudos";
-	src: font-url("/assets/fonts/GOUDOS.TTG");
+	src: url("/assets/fonts/GOUDOS.TTG");
 }
 
 .font-large {
