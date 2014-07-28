@@ -36,7 +36,7 @@
     </div>
   </div>
 
-  <div class="field control-label disabled form-group center-text" id="party_size_js">
+  <div class="field control-label disabled form-group center-text" id="party_size_js" style="display:none;">
     <p><%= f.label :party_size %>
     <small>Total people in your party including yourself</small>
     <%= f.number_field :party_size, class: 'form-control', value: "#{@default_value}" %>
