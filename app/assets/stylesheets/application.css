@@ -22,11 +22,11 @@
 }
 
 body {
-	background: #c9c9c9 asset-url('background4.png');
+	background: #c9c9c9 url('background4.png');
 }
 
 #main-body {
-	background: #c9c9c9 asset-url('newbackground.png');
+	background: #c9c9c9 url('newbackground.png');
 	border: 1px solid;
   border-radius: 25px;
 }

@@ -25,7 +25,8 @@
 a.buttons-mine{
 	background-color: transparent;
 	border: none;
-		&.buttons-mine:hover{
-		background-color: transparent;
-	}
+}
+
+a.buttons-mine:hover{
+	background-color: transparent;
 }
