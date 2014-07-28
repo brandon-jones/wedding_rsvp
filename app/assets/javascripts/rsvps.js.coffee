@@ -4,9 +4,11 @@
 
 
 $(document).ready ->
+
   $("input:radio").on "change", ->
-    if $("input[type=radio]:checked").val() is "yes"
-      $("#party_size_js").removeClass("disabled")
+    if $("input[type=radio]:checked").val() is "true"
+      $("#party_size_js").fadeTo(500, 1)
     else
-      $("#party_size_js").addClass("disabled")
+      $("#party_size_js").fadeTo(500, 0)
+      $("#party_size_js").css("display","none");
 return
