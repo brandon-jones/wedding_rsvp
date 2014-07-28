@@ -1,38 +1,25 @@
-<div class="body-title">
-	<h1 class="text-center ">Hotels</h1>
-</div>
-<div class="white-background">
-<p id="hotel-welcome">
-	<b>
-		For our out of town guests we invite you to stay in one of our many hotels and experince the town of Tehachapi. Listed below are most of the hotels found in town. We have left off the hotels that we ourselves would not stay at. 
-	</b>
-</p>
 
-<div class="warning">
-<div class="panel panel-danger">
-	<div class="panel-heading">
-    <h3 class="panel-title">Holiday Inn Express group rate information</h3>
-  </div>
-  <div class="panel-body">
-  	<p>
-	    If you use the code JLW at the <b>Holiday Inn Express Hotel</b> reservation site you can get discounted rates, wavied cancellation fees and more.
-  	</p>
-  </div>
-</div>
+<div id="my-form">
+
+	<h1 class="center-text">Hotels</h1>
+
+	<p id="hotel-welcome">
+		<b>
+			For our out of town guests we invite you to stay in one of our many hotels and experince the town of Tehachapi. Listed below are most of the hotels found in town. We have left off the hotels that we ourselves would not stay at. 
+		</b>
+	</p>
+
 </div>
 
 
+	<% @hotels.each_with_index do |hotel,index| %>
 
-
-<div class="container-fluid">
-	<% @hotels.each do |hotel| %>
 		<div class="row hotel-list">
-
-			<div class="col-xs-2">
+			<div class="col-md-2" >
 				<%= image_tag("hotel_images/#{hotel['logo']}", size: "160x100") %>
 			</div>
 
-			<div class="col-xs-6">
+			<div class="col-md-6">
 				<p>
 					<b><%= hotel['name'] %></b>
 					</br>
@@ -44,16 +31,37 @@
 				</p>
 			</div>
 
-			<div class="col-xs-2">
+			<div class="col-md-2">
 			  <%= image_tag("hotel_images/#{hotel['image']}", size: "160x100") %>
 			</div>
 
-			<div class="col-xs-2">
+			<div class="col-md-2">
 				<p>
 			  	<%= link_to('Map',map_url(hotel['address']),:target => "_blank") %> </br></br> <%= link_to('Reservations',hotel['link_to_reservation'],:target => "_blank") %>
 			  </p>
 			</div>
 
+			<% if index == 0 %>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 hotel-notice">
+						<div class="warning">
+							<div class="panel panel-danger">
+								<div class="panel-heading">
+							    <h3 class="panel-title center-text">Holiday Inn Express group rate information</h3>
+							  </div>
+							  <div class="panel-body center-text">
+							  	<p>
+								    If you use the code <b>JLW</b> at the <b>Holiday Inn Express Hotel</b> reservation site you can get discounted rates, wavied cancellation fees and more.
+							  	</p>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<% end %>
+
 		</div>
 	<% end %>
-</div>
+	
+
+

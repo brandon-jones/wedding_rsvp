@@ -6,7 +6,11 @@ class RsvpsController < ApplicationController
   # GET /rsvps
   # GET /rsvps.json
   def index
-    @rsvps = Rsvp.all
+    if params[:sort_by] && params[:order_by]
+      @rsvps = Rsvp.order("#{params[:sort_by]} #{params[:order_by]}")
+    else
+      @rsvps = Rsvp.all
+    end
   end
 
   # GET /rsvps/1

@@ -1,54 +1,53 @@
-<div class="container-fluid">
-<div class="row">
-  <div class="my-form">
 
+<% if @rsvp.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@rsvp.errors.count, "error") %> prohibited rsvp from being saved:</h2>
 
-      <% if @rsvp.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@rsvp.errors.count, "error") %> prohibited rsvp from being saved:</h2>
-
-          <ul>
-          <% @rsvp.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
-
-
-    <%= form_for(@rsvp, html: {role: 'form' }) do |f| %>
-
-      <div class="field control-label form-group" >
-        <p><%= f.label :name %>
-        <small>Family or Individual name</small>
-        <%= f.text_field :name, required: '', class: 'form-control'  %></p>
-      </div>
-      <div class="field control-label form-group" >
-        <p><%= f.label :contact %>
-        <small>Email, Phone Number or Address</small>
-        <%= f.text_field :contact, required: '', class: 'form-control' %></p>
-        
-      </div>
-      <div class="field control-label form-group" id="attending_js">
-        <div class='rd-button'>
-          <%= f.label :NOT_attending %>
-          <%= f.radio_button :attending, false, checked: true, class: 'radio-inline' %>
-        </div>
-        <div class='rd-button'>
-          <%= f.label :attending %>
-          <%= f.radio_button :attending, true, class: 'radio-inline rd-button'  %>
-        </div>
-      </div>
-      <div class="field control-label disabled form-group" id="party_size_js">
-        <p><%= f.label :party_size %>
-        <small>Total people in your party including yourself</small>
-        <%= f.number_field :party_size, class: 'form-control', value: "#{@default_value}" %>
-      </div>
-        </br>
-      <div class="actions form-group">
-        <p><%= f.submit 'RSVP', class: "btn btn-default" %></p>
-      </div>
+    <ul>
+    <% @rsvp.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
     <% end %>
+    </ul>
   </div>
-</div>
-</div>
+<% end %>
+
+<%= form_for(@rsvp, html: {role: 'form' }) do |f| %>
+
+  <div class="field control-label form-group center-text" >
+    <p><%= f.label :name %>
+    <small>Family or Individual name</small>
+    <%= f.text_field :name, required: '', class: 'form-control'  %></p>
+  </div>
+
+  <div class="field control-label form-group center-text" >
+    <p><%= f.label :contact %>
+    <small>Email, Phone Number or Address</small>
+    <%= f.text_field :contact, required: '', class: 'form-control' %></p>
+  </div>
+
+  <div class="field control-label form-group center-text" id="attending_js">
+    <div class='rd-button'>
+      <%= f.label :NOT_attending %>
+      <%= f.radio_button :attending, false, checked: true, class: 'radio-inline' %>
+    </div>
+    <div class='rd-button'>
+      <%= f.label :attending %>
+      <%= f.radio_button :attending, true, class: 'radio-inline rd-button'  %>
+    </div>
+  </div>
+
+  <div class="field control-label disabled form-group center-text" id="party_size_js">
+    <p><%= f.label :party_size %>
+    <small>Total people in your party including yourself</small>
+    <%= f.number_field :party_size, class: 'form-control', value: "#{@default_value}" %>
+  </div>
+
+  </br>
+
+  <div class="row">
+    <div class="col-md-12 form-group center-text">
+      <p><%= f.submit 'RSVP', class: "btn btn-default btn-lg" %></p>
+    </div>
+  </div>
+
+<% end %>

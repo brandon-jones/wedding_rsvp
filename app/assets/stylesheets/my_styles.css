@@ -2,23 +2,24 @@
 	background-color: transparent;
 }
 
-div.my-form {
+div#my-form {
 	background-color: white;
 	padding: 20px 20px;
   border-radius: 10px;
-  width:40%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.center-text {
   text-align: center;
 }
-div.my-home-form {
+
+div#my-home-form {
 	background-color: white;
 	padding: 20px 20px;
   border-radius: 10px;
-  width:80%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 div.carousel {
@@ -26,8 +27,12 @@ div.carousel {
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 40px;
-  width: 480px;
-  height: 640px;
+  max-width: 480px;
+  max-height: 640px;
+}
+
+#new_guestbook {
+	padding-top: 20px;
 }
 
 img.my-images {
@@ -38,9 +43,16 @@ img.my-images {
   padding: 10px 10px;
 }
 
+#my-boarder {
+	background-color: #ff9999;
+  border: 1px solid;
+}
+
 .white-background {
 	background-color: white;
 	border-radius: 5px;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
 nav.pagination{
@@ -54,15 +66,6 @@ nav.pagination{
 .page {
 	padding: 10px 10px;
 	font-size: 1.2em;
-}
-
-a {
-	color: black;
-}
-a:hover
-{ 
-	color:black;
-	background-color: #c9c9c9;
 }
 
 .page.current {
@@ -80,14 +83,32 @@ a:hover
 
 }*/
 
+.body-title {
+	padding: 20px 0px 20px 0px;
+}
+
+.center-div {
+	margin-left: auto;
+  margin-right: auto;
+}
+
+#attending_js {
+
+}
+
+#grey-background {
+	margin: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+	background-color: #c9c9c9;
+	border-radius: 5px;
+}
+
 .warning {
-	width: 80%;
 	margin-left: auto;
   margin-right: auto;
 }
 
 #rsvp_party_size {
-	width: 40%;
 	margin-left: auto;
   margin-right: auto;
 }
@@ -114,12 +135,12 @@ h1 {
 
 @font-face {
 	font-family: "alger";
-	src: url("/assets/fonts/ALGER.TTG");
+	src: font-url("/assets/fonts/ALGER.TTG");
 }
 
 @font-face {
 	font-family: "goudos";
-	src: url("/assets/fonts/GOUDOS.TTG");
+	src: font-url("/assets/fonts/GOUDOS.TTG");
 }
 
 .font-large {
@@ -131,6 +152,14 @@ h1 {
 	font-size:1.2em;
 }
 
-#guestbook-form {
+/*#guestbook-form {
 	padding: 20px 20px;
+}*/
+
+a:link    {color:black;}
+a:visited {color:black;}
+a:hover   {
+	color:black;
+	background-color: transparent;
 }
+a:active  {color:black;}
