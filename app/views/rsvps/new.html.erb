@@ -7,7 +7,15 @@
 		  <p><%= link_to('Admin', rsvps_path(order_by: :asc, sort_by: :name)) %></p>
 		</div>
 
+		<div class="center-text">
+			<% flash.each do |name, msg| -%>
+	  		<%= content_tag :div, msg, class: name, id: 'top-notice' %>
+			<% end -%>
+		</div>
+
 		<%= render 'form' %>
+		<p>If you made an error when filling out the RSVP form, please email zkForever.am@gmail.com</p>
+	</div>
 
 	</div>
 </div>

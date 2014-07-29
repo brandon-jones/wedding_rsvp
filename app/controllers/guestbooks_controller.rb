@@ -50,7 +50,7 @@ class GuestbooksController < ApplicationController
     @guestbook = Guestbook.new(guestbook_params)
 
       if @guestbook.save
-        redirect_to guestbooks_path, notice: 'Message was left.'
+        redirect_to guestbooks_path, notice: 'Thank you for leaving a message.'
       else
         render action: 'new'
       end

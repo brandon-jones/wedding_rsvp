@@ -7,6 +7,9 @@
   			<div align="right">
 					<p><%= link_to('Admin', manage_guestbooks_path) %></p>
 				</div>
+				<% flash.each do |name, msg| -%>
+  				<%= content_tag :div, msg, class: "#{name} center-text" %>
+				<% end -%>
 			</div>
 		</div>
 
@@ -36,7 +39,7 @@
 			    	<div><b><p><%= guestbook.name %></p></b></div>
 			    </div>
 			    <div class="col-md-2">
-			    	<div><i><p><%= guestbook.created_at.to_formatted_s(:short) %></p></i></div>
+			    	<div><i><p><%= local_time(guestbook.created_at) %></p></i></div>
 			    </div>
 			    <div class="row">
 				    <div class="col-md-12">

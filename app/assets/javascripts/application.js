@@ -15,4 +15,5 @@
 //= require jquery.turbolinks
 //= require bootstrap.min
 //= require turbolinks
+//= require local_time
 //= require_tree .
