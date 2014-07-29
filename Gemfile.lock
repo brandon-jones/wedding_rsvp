@@ -56,6 +56,8 @@ GEM
     kaminari (0.16.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    local_time (1.0.0)
+      coffee-rails
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -151,6 +153,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   kaminari
+  local_time (~> 1.0.0)
   meta_request
   nokogiri (~> 1.6.2.1)
   pg
