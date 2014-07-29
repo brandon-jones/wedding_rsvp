@@ -11,6 +11,9 @@ class RsvpsController < ApplicationController
     else
       @rsvps = Rsvp.all
     end
+
+    @total_count = Rsvp.where(attending: true).sum(:party_size)
+    @party_count = Rsvp.where(attending: true).count
   end
 
   # GET /rsvps/1

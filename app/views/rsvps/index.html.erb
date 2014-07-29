@@ -7,6 +7,11 @@
     <% flash.each do |name, msg| -%>
       <%= content_tag :div, msg, class: "#{name} center-text" %>
     <% end -%>
+
+    <b>Total parties attending</b> <%= @party_count %>
+    </br>
+    <b>Total people attending:</b> <%= @total_count %>
+    </br></br>
     
     <table class="table table-striped table-bordered">
       <thead>
