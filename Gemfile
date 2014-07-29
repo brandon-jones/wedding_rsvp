@@ -41,6 +41,9 @@ gem 'prawn', '~> 1.1.0'
 gem 'rest-client', '~> 1.7.1'
 gem 'nokogiri', '~> 1.6.2.1'
 
+
+gem 'jquery-turbolinks'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

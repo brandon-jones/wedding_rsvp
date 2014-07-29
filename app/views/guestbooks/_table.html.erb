@@ -1,25 +1,24 @@
-<table class="table table-striped table-bordered table-hover white-background">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Created on</th>
-      <th>Message</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% post.each do |guestbook| %>
-      <tr>
-        <td><%= guestbook.name %></td>
-        <td><%= guestbook.created_at.to_formatted_s(:short) %></td>
-        <td><%= guestbook.message %></td>
-        <td><%= link_to 'Destroy', guestbook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% if guestbook.flag == true %>
-        <td><%= link_to 'Approve', approve_guestbook_path(guestbook.id) %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Created on</th>
+    <th>Message</th>
+    <th></th>
+    <th></th>
+  </tr>
+</thead>
+
+<tbody>
+  <% post.each do |guestbook| %>
+    <tr>
+      <td><%= guestbook.name %></td>
+      <td><%= guestbook.created_at.to_formatted_s(:short) %></td>
+      <td><%= guestbook.message %></td>
+      <td><%= link_to 'Destroy', guestbook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% if guestbook.flag == true %>
+      <td><%= link_to 'Approve', approve_guestbook_path(guestbook.id) %></td>
+      <% end %>
+    </tr>
+  <% end %>
+</tbody>

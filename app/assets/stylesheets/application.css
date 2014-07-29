@@ -21,36 +21,12 @@
 	padding-top: 5px;
 }
 
-/*.carousel {
-	width:700px;
-	height:300px;
-}*/
-
 body {
 	background: #c9c9c9 url('background4.png');
 }
 
-#sidebar {
-	background: none;
-	border: none;
-}
-
 #main-body {
 	background: #c9c9c9 url('newbackground.png');
-	padding: 20px 20px 40px 20px;
 	border: 1px solid;
   border-radius: 25px;
-  min-height:30em;
-}
-
-#content {
-	margin-left: auto;
-  margin-right: auto;
-  margin-top: 5px;
-  margin-bottom: 100px;
-  width: 85%;
-}
-
-#btn {
-	background-color: red;
 }

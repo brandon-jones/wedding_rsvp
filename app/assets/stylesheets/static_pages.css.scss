@@ -6,21 +6,27 @@
   border-radius: 25px;
 }
 
+.hotel-notice {
+	margin-top: 20px;
+}
+
 .warning {
 	color: red;
 }
 
 #top-nav-bar {
+	margin-bottom: 20px;
 	border: 1px solid;
   border-radius: 10px;
-  background-image: url('ribbon3.png');
+  background-image: asset-url('ribbon3.png');
+
 }
 
-.buttons-mine{
+a.buttons-mine{
 	background-color: transparent;
 	border: none;
 }
 
-.buttons-mine:hover{
-	opacity:0.5;
+a.buttons-mine:hover{
+	background-color: transparent;
 }
