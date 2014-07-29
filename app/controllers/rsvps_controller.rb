@@ -33,6 +33,9 @@ class RsvpsController < ApplicationController
   # POST /rsvps.json
   def create
     @rsvp = Rsvp.new(rsvp_params)
+    if @rsvp.attending == true && @rsvp.party_size < 1
+      redirect_to new_rsvp_path, notice: 'Error please try again.'
+    else
       if @rsvp.save
         if @rsvp.attending == false
           redirect_to root_path, notice: 'We are sorry you can not make it.'
@@ -42,6 +45,7 @@ class RsvpsController < ApplicationController
       else
         render action: 'new'
       end
+    end
   end
 
   # PATCH/PUT /rsvps/1
