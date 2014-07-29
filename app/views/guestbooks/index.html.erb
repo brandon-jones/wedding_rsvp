@@ -7,6 +7,9 @@
   			<div align="right">
 					<p><%= link_to('Admin', manage_guestbooks_path) %></p>
 				</div>
+				<% flash.each do |name, msg| -%>
+  				<%= content_tag :div, msg, class: "#{name} center-text" %>
+				<% end -%>
 			</div>
 		</div>
 

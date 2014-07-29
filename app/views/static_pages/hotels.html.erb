@@ -27,7 +27,9 @@
 					</br>
 				  <%= hotel['phone'] %>
 				  </br>
-				  <%= hotel['rating'] %>/5 stars
+				  <%= get_stars(hotel['rating']) %>
+				  </br>
+				  <%= hotel['distance'] %> miles from wedding
 				</p>
 			</div>
 
@@ -37,7 +39,7 @@
 
 			<div class="col-md-2">
 				<p>
-			  	<%= link_to('Map',map_url(hotel['address']),:target => "_blank") %> </br></br> <%= link_to('Reservations',hotel['link_to_reservation'],:target => "_blank") %>
+			  	<%= link_to('Map',map_url(hotel['address']),:target => "_blank", class: 'map-link') %> </br></br> <%= link_to('Reservations',hotel['link_to_reservation'],:target => "_blank", class: 'map-link') %>
 			  </p>
 			</div>
 

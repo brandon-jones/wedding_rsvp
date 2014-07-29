@@ -25,8 +25,8 @@
 a.buttons-mine{
 	background-color: transparent;
 	border: none;
-		&.buttons-mine:hover{
-		background-color: transparent;
-		font-family: "Impact", Charcoal, sans-serif;
-	}
+}
+
+a.buttons-mine:hover{
+	background-color: transparent !important;
 }
