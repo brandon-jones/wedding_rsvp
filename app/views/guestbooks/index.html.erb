@@ -39,7 +39,7 @@
 			    	<div><b><p><%= guestbook.name %></p></b></div>
 			    </div>
 			    <div class="col-md-2">
-			    	<div><i><p><%= guestbook.created_at.localtime.to_formatted_s(:short) %></p></i></div>
+			    	<div><i><p><%= guestbook.created_at.in_time_zone("Pacific Time (US & Canada)").to_formatted_s(:short) %></p></i></div>
 			    </div>
 			    <div class="row">
 				    <div class="col-md-12">
