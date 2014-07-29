@@ -5,10 +5,17 @@
 
 $(document).ready ->
 
-  $("input:radio").on "change", ->
+	$("input:radio").on "change", ->
     if $("input[type=radio]:checked").val() is "true"
       $("#party_size_js").fadeTo(500, 1)
     else
       $("#party_size_js").fadeTo(500, 0)
-      $("#party_size_js").css("display","none");
+      $("#party_size_js").css("display","none")
+
+  $('.notice').delay(4000).fadeOut(200);
+
+	if $("input[type=radio]:checked").val() is "true"
+		$("#party_size_js").fadeTo(0, 1)
+
+  
 return
