@@ -1,5 +1,7 @@
 WeddingRsvp::Application.routes.draw do
-  resources :rsvps
+  resources :rsvps do
+    get 'export', on: :collection
+  end
 
   resources :blogs , except: [ :show, :update, :new ] do
     get 'manage', on: :collection

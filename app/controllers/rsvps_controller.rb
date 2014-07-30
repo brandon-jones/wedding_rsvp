@@ -6,11 +6,36 @@ class RsvpsController < ApplicationController
   # GET /rsvps
   # GET /rsvps.json
   def index
-    if params[:sort_by] && params[:order_by]
-      @rsvps = Rsvp.order("#{params[:sort_by]} #{params[:order_by]}")
+
+    if params[:show]
+      @show = params[:show]
+      case @show
+        when 'all'
+          @rsvps = Rsvp.all
+        when 'only_going'
+          @rsvps = Rsvp.where(attending: true)
+        when 'only_not_going'
+          @rsvps = Rsvp.where(attending: false)
+        else
+          @rsvps = Rsvp.all
+      end
     else
       @rsvps = Rsvp.all
     end
+    if params[:sort_by] && params[:order_by]
+      @rsvps = @rsvps.order("#{params[:sort_by].gsub(' ','_')} #{params[:order_by]}")
+    end
+
+    # if params[:js] == true
+    #   @partial = true
+    # else
+    #   @partial = false
+    # end
+
+    if params[:js] == 'true'
+      return render partial: 'rsvp_list'
+    end
+
 
     @total_count = Rsvp.where(attending: true).sum(:party_size)
     @party_count = Rsvp.where(attending: true).count
@@ -19,6 +44,33 @@ class RsvpsController < ApplicationController
   # GET /rsvps/1
   # GET /rsvps/1.json
   def show
+  end
+
+  def export
+    if params[:show]
+      case params[:show]
+      when 'all'
+        @rsvp_for_export = Rsvp.all
+      when 'only_going'
+        @rsvp_for_export = Rsvp.where(attending: true)
+      when 'only_not_going'
+        @rsvp_for_export = Rsvp.where(attending: false)
+      end
+    end
+
+    if params[:sort_by] && params[:order_by]
+      @rsvp_for_export = @rsvp_for_export.order("#{params[:sort_by]} #{params[:order_by]}")
+    elsif params[:sort_by]
+      @rsvp_for_export = @rsvp_for_export.order("#{params[:sort_by]}")
+    end
+
+    if params[:extension]
+      if params[:extension] == 'csv'
+        binding.pry
+        render text: @rsvp_for_export.to_csv
+      end
+    end
+
   end
 
   # GET /rsvps/new
