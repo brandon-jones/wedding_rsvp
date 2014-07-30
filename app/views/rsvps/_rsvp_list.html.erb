@@ -31,7 +31,7 @@
             <td><p><%= rsvp.contact %></p></td>
             <td><p><%= rsvp.attending %></p></td>
             <td><p><%= rsvp.party_size %></p></td>
-            <td><p><%= link_to 'Edit', edit_rsvp_path(rsvp) %></p></td>
+            <td><p><%= link_to 'Edit', edit_rsvp_path(rsvp, sort_by: params[:sort_by], order_by: params[:order_by], show: params[:show]) %></p></td>
             <td><p><%= link_to 'Destroy', rsvp, method: :delete, data: { confirm: 'Are you sure?' } %></p></td>
           </tr>
         <% end %>
