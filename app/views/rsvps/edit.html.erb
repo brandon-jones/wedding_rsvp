@@ -1,6 +1,23 @@
-<h1>Editing rsvp</h1>
+<div class="row-fluid">
+  <div class="col-md-6 col-md-offset-3" id="my-form">
 
-<%= render 'form' %>
+		<h1 class="center-text">Editing RSVP</h1>
 
-<p><%= link_to 'Show', @rsvp %> |
-<%= link_to 'Back', rsvps_path %> </p>
+		<div align="right">
+		  <p><%= link_to('Admin', rsvps_path(order_by: :asc, sort_by: :name, show: :all)) %></p>
+		</div>
+
+		<div class="center-text">
+			<% flash.each do |name, msg| -%>
+	  		<%= content_tag :div, msg, class: name, id: 'top-notice' %>
+			<% end -%>
+		</div>
+
+		<%= render 'form' %>
+		
+		<p><%= link_to('Back', rsvps_path(sort_by: params[:sort_by], order_by: params[:order_by], show: params[:show])) %> </p>
+
+	</div>
+
+	</div>
+</div>

@@ -3,30 +3,23 @@
   <div class="col-md-10 col-md-offset-1 white-background">
 
     <h1 class="text-center body-title">Showing all RSVPs</h1>
-    <table class="table table-striped table-bordered">
-      <thead>
-        <tr>
-          <th><%= direction_arrow('name') %><%= link_to('Name',rsvps_path(:sort_by => 'name', :order_by => get_order('name'))) %></th>
-          <th><%= direction_arrow('contact') %><%= link_to('Contact',rsvps_path(:sort_by => 'contact', :order_by => get_order('contact'))) %></th>
-          <th><%= direction_arrow('attending') %><%= link_to('Attending',rsvps_path(:sort_by => 'attending', :order_by => get_order('attending'))) %></th>
-          <th><%= direction_arrow('party_size') %><%= link_to('Party size',rsvps_path(:sort_by => 'party_size', :order_by => get_order('party_size'))) %></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
 
-      <tbody>
-        <% @rsvps.each do |rsvp| %>
-          <tr>
-            <td><p><%= rsvp.name %></p></td>
-            <td><p><%= rsvp.contact %></p></td>
-            <td><p><%= rsvp.attending %></p></td>
-            <td><p><%= rsvp.party_size %></p></td>
-            <td><p><%= link_to 'Edit', edit_rsvp_path(rsvp) %></p></td>
-            <td><p><%= link_to 'Destroy', rsvp, method: :delete, data: { confirm: 'Are you sure?' } %></p></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+    <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: "#{name} center-text" %>
+    <% end -%>
+    
+    <div class="control-group">
+      <div class="controls form-inline center-text">
+        Show <%= select_tag :show, options_for_select( {'All' => 'all', 'Only Going' => 'only_going', 'Only Not Going' => 'only_not_going'}, params[:show]), { :class => 'btn btn-default btn-lg', :id => 'visible_options' } %>
+      
+      </div>
+    </div>
+
+    <div id="table-js">
+    <HR>
+    <%= render partial: 'rsvp_list' %>
+
+    </div>
+
   </div>
-  </div>
+</div>

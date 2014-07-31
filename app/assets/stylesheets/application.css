@@ -25,25 +25,8 @@ body {
 	background: #c9c9c9 url('background4.png');
 }
 
-#sidebar {
-	background: none;
-	border: none;
-}
-
 #main-body {
 	background: #c9c9c9 url('newbackground.png');
 	border: 1px solid;
   border-radius: 25px;
-}
-
-/*#content {
-	margin-left: auto;
-  margin-right: auto;
-  margin-top: 5px;
-  margin-bottom: 100px;
-  width: 85%;
-}*/
-
-#btn {
-	background-color: red;
 }

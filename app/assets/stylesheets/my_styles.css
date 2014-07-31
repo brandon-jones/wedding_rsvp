@@ -87,17 +87,6 @@ nav.pagination{
 .page.current {
 	color:grey;
 }
-/*
-.body-title {
-	height: 1.5em;
-	border-radius: 5px;
-	background-color: white;
-	padding-top: 5px;
-	padding-left: 5px;
-	padding-right: 5px;
-  font-size: 2em;
-
-}*/
 
 .body-title {
 	padding: 20px 0px 20px 0px;
@@ -106,10 +95,6 @@ nav.pagination{
 .center-div {
 	margin-left: auto;
   margin-right: auto;
-}
-
-#attending_js {
-
 }
 
 #grey-background {
@@ -151,12 +136,12 @@ h1 {
 
 @font-face {
 	font-family: "alger";
-	src: font-url("/assets/fonts/ALGER.TTG");
+	src: url("/assets/fonts/ALGER.TTG");
 }
 
 @font-face {
 	font-family: "goudos";
-	src: font-url("/assets/fonts/GOUDOS.TTG");
+	src: url("/assets/fonts/GOUDOS.TTG");
 }
 
 .font-large {
@@ -167,10 +152,6 @@ h1 {
 .font-medium {
 	font-size:1.2em;
 }
-
-/*#guestbook-form {
-	padding: 20px 20px;
-}*/
 
 a:link    {color:black;}
 a:visited {color:black;}
