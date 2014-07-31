@@ -13,7 +13,7 @@ module RsvpsHelper
 	end
 
 	def direction_arrow(name)
-		if params[:sort_by] && params[:sort_by] == name
+		if params[:sort_by] && params[:sort_by].gsub(' ', '_') == name
 			if params[:order_by] == 'asc'
 				return raw "<span class='glyphicon glyphicon-chevron-up'></span> "
 			else

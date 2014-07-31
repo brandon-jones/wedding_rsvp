@@ -1,0 +1,48 @@
+<div class="center-text">
+</br>
+<b>Total people attending:</b> <%= @total_count %>
+</br></br>
+</div>
+
+<%= form_tag(export_rsvps_path, method: "get", class: "form-horizontal center-text", target: "_blank") do %>
+        <div class="control-group">
+          <div class="controls form-inline">
+            <%= hidden_field_tag 'sort_by', params[:sort_by] %>
+            <%= hidden_field_tag 'order_by', params[:order_by] %>
+            <%= hidden_field_tag 'show', params[:show] %>
+            <%= select_tag :extension, options_for_select( {'PDF' => 'pdf', 'CSV' => 'csv'}), { :class => 'btn btn-default btn-lg' } %>
+            <%= submit_tag 'Export Showing', class: "btn btn-default btn-sm" %>
+          </div>
+        </div>
+      <% end %>
+
+    </br>
+
+    <table class="table table-striped table-bordered" id="rsvp-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th><%= direction_arrow('name') %><a class="sort_col" href="#">Name</a></th>
+          <th><%= direction_arrow('contact') %><a class="sort_col" href="#">Contact</a></th>
+          <th><%= direction_arrow('attending') %><a class="sort_col" href="#">Attending</a></th>
+          <th><%= direction_arrow('party_size') %><a class="sort_col" href="#">Party size</a></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @rsvps.each_with_index do |rsvp,i| %>
+          <tr>
+            <td><p><%= i+1 %></p></td>
+            <td><p><%= rsvp.name %></p></td>
+            <td><p><%= rsvp.contact %></p></td>
+            <td><p><%= noramlize_bool(rsvp.attending) %></p></td>
+            <td><p><%= rsvp.party_size %></p></td>
+            <td><p><%= link_to 'Edit', edit_rsvp_path(rsvp, sort_by: params[:sort_by], order_by: params[:order_by], show: params[:show]) %></p></td>
+            <td><p><%= link_to 'Destroy', rsvp, method: :delete, data: { confirm: 'Are you sure?' } %></p></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    </div>

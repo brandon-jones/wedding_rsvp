@@ -1,11 +1,10 @@
 class Contact < ActionMailer::Base
-  # default from: "ZKForever.am@gmail.com"
+  default from: "ZKForever.am@gmail.com"
 
   def contact_email(message_params)
     @name = message_params[:name]
-    @email = message_params[:email]
+    @contact = message_params[:contact]
     @message = message_params[:message]
-    subject = message_params[:subject]
-    mail(to: 'zkforever.am@gmail.com', subject: message_params[:subject], from: message_params[:email])
+    mail(to: 'zkforever.am@gmail.com', subject: 'Question from the site.')
   end
 end
