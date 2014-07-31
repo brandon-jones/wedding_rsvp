@@ -7,22 +7,16 @@
     <% flash.each do |name, msg| -%>
       <%= content_tag :div, msg, class: "#{name} center-text" %>
     <% end -%>
-
-    <b>Total parties attending:</b> <%= @party_count %>
-    </br>
-    <b>Total people attending:</b> <%= @total_count %>
-    </br></br>
     
-
     <div class="control-group">
-      <div class="controls form-inline">
-        Show<%= select_tag :show, options_for_select( {'All' => 'all', 'Only Going' => 'only_going', 'Only Not Going' => 'only_not_going'}, params[:show]), { :class => 'btn btn-default btn-lg', :id => 'visible_options' } %>
+      <div class="controls form-inline center-text">
+        Show <%= select_tag :show, options_for_select( {'All' => 'all', 'Only Going' => 'only_going', 'Only Not Going' => 'only_not_going'}, params[:show]), { :class => 'btn btn-default btn-lg', :id => 'visible_options' } %>
       
       </div>
     </div>
 
     <div id="table-js">
-
+    <HR>
     <%= render partial: 'rsvp_list' %>
 
     </div>

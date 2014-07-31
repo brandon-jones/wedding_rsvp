@@ -1,4 +1,10 @@
-<%= form_tag(export_rsvps_path, method: "get", class: "form-horizontal", :remote=>true) do %>
+<div class="center-text">
+</br>
+<b>Total people attending:</b> <%= @total_count %>
+</br></br>
+</div>
+
+<%= form_tag(export_rsvps_path, method: "get", class: "form-horizontal center-text", target: "_blank") do %>
         <div class="control-group">
           <div class="controls form-inline">
             <%= hidden_field_tag 'sort_by', params[:sort_by] %>
@@ -10,11 +16,12 @@
         </div>
       <% end %>
 
-    </br></br>
+    </br>
 
     <table class="table table-striped table-bordered" id="rsvp-table">
       <thead>
         <tr>
+          <th></th>
           <th><%= direction_arrow('name') %><a class="sort_col" href="#">Name</a></th>
           <th><%= direction_arrow('contact') %><a class="sort_col" href="#">Contact</a></th>
           <th><%= direction_arrow('attending') %><a class="sort_col" href="#">Attending</a></th>
@@ -25,11 +32,12 @@
       </thead>
 
       <tbody>
-        <% @rsvps.each do |rsvp| %>
+        <% @rsvps.each_with_index do |rsvp,i| %>
           <tr>
+            <td><p><%= i+1 %></p></td>
             <td><p><%= rsvp.name %></p></td>
             <td><p><%= rsvp.contact %></p></td>
-            <td><p><%= rsvp.attending %></p></td>
+            <td><p><%= noramlize_bool(rsvp.attending) %></p></td>
             <td><p><%= rsvp.party_size %></p></td>
             <td><p><%= link_to 'Edit', edit_rsvp_path(rsvp, sort_by: params[:sort_by], order_by: params[:order_by], show: params[:show]) %></p></td>
             <td><p><%= link_to 'Destroy', rsvp, method: :delete, data: { confirm: 'Are you sure?' } %></p></td>
