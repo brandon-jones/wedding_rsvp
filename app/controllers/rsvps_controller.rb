@@ -6,7 +6,9 @@ class RsvpsController < ApplicationController
   # GET /rsvps
   # GET /rsvps.json
   def index
-
+    params[:show] = 'all' unless params[:show]
+    params[:sort_by] = 'name' unless params[:sort_by]
+    params[:order_by] = 'asc' unless params[:order_by]
     if params[:show]
       @show = params[:show]
       case @show
@@ -99,9 +101,9 @@ class RsvpsController < ApplicationController
   def create
     @rsvp = Rsvp.new(rsvp_params)
     if @rsvp.attending == true && @rsvp.party_size < 1
-      redirect_to new_rsvp_path, notice: 'Party size can not be 0.'
-    elsif Rsvp.where(contact: @rsvp.contact.downcase).count > 0
-      redirect_to new_rsvp_path, notice: 'Contact info already registered.'
+      redirect_to new_rsvp_path, notice: 'Party size can not be 0 if you say you are attending'
+    elsif Rsvp.where(contact: @rsvp.contact.split(' ').map {|w| w.capitalize }.join(' ')).count > 0
+      redirect_to new_rsvp_path, notice: "Contact info already registered. Email zkForever.am@gmail.com with your contact info if you want to verify your RSVP"
     else
       if @rsvp.save
         if @rsvp.attending == false
@@ -119,7 +121,7 @@ class RsvpsController < ApplicationController
   # PATCH/PUT /rsvps/1.json
   def update
       if @rsvp.update(rsvp_params)
-        redirect_to rsvps_path, notice: 'Rsvp was successfully updated.'
+        redirect_to rsvps_path(sort_by: params[:sort_by], order_by: params[:order_by], show: params[:show]), notice: 'Rsvp was successfully updated.'
       else
         render action: 'edit'
       end
@@ -129,7 +131,7 @@ class RsvpsController < ApplicationController
   # DELETE /rsvps/1.json
   def destroy
     @rsvp.destroy
-    redirect_to rsvps_url
+    redirect_to rsvps_url(params.except!('_method','action','id','authenticity_token','controller'))
   end
 
   private
