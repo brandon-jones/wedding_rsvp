@@ -1,3 +1,4 @@
+<HR>
 <div class="center-text">
 </br>
 <b>Total people attending:</b> <%= @total_count %>
@@ -11,7 +12,7 @@
             <%= hidden_field_tag 'order_by', params[:order_by] %>
             <%= hidden_field_tag 'show', params[:show] %>
             <%= select_tag :extension, options_for_select( {'PDF' => 'pdf', 'CSV' => 'csv'}), { :class => 'btn btn-default btn-lg' } %>
-            <%= submit_tag 'Export Showing', class: "btn btn-default btn-sm" %>
+            <%= submit_tag 'Export whats showing', class: "btn btn-default btn-sm", title: 'Exports current report exactly as you are looking at it.' %>
           </div>
         </div>
       <% end %>
@@ -39,8 +40,8 @@
             <td><p><%= rsvp.contact %></p></td>
             <td><p><%= noramlize_bool(rsvp.attending) %></p></td>
             <td><p><%= rsvp.party_size %></p></td>
-            <td><p><%= link_to 'Edit', edit_rsvp_path(rsvp, sort_by: params[:sort_by], order_by: params[:order_by], show: params[:show]) %></p></td>
-            <td><p><%= link_to 'Destroy', rsvp, method: :delete, data: { confirm: 'Are you sure?' } %></p></td>
+            <td><p><%= link_to 'Edit', "/rsvps/#{rsvp.id}/edit?sort_by=#{params[:sort_by]}&order_by=#{params[:order_by]}&show=#{params[:show]}" %></p></td>
+            <td><p><%= link_to 'Destroy', "/rsvps/#{rsvp.id}?sort_by=#{params[:sort_by]}&order_by=#{params[:order_by]}&show=#{params[:show]}", method: :delete, data: { confirm: 'Are you sure?' } %></p></td>
           </tr>
         <% end %>
       </tbody>

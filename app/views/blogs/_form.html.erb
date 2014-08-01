@@ -20,6 +20,6 @@
     <%= f.text_area :body %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit(sort_by: params[:sort_by], order_by: params[:order_by], show: params[:show]) %>
   </div>
 <% end %>
