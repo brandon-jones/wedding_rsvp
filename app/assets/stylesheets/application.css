@@ -29,4 +29,5 @@ body {
 	background: #c9c9c9 url('newbackground.png');
 	border: 1px solid;
   border-radius: 25px;
+  min-height: 650px;
 }
