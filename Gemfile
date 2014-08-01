@@ -42,7 +42,7 @@ gem 'rest-client', '~> 1.7.1'
 gem 'nokogiri', '~> 1.6.2.1'
 
 
-gem 'jquery-turbolinks'
+gem 'prawn-table', '~> 0.1.0'
 
 gem 'local_time', '~> 1.0.0'
 

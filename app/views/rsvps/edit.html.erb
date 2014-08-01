@@ -4,7 +4,7 @@
 		<h1 class="center-text">Editing RSVP</h1>
 
 		<div align="right">
-		  <p><%= link_to('Admin', rsvps_path(order_by: :asc, sort_by: :name)) %></p>
+		  <p><%= link_to('Admin', rsvps_path(order_by: :asc, sort_by: :name, show: :all)) %></p>
 		</div>
 
 		<div class="center-text">
@@ -15,7 +15,7 @@
 
 		<%= render 'form' %>
 		
-		<p><%= link_to 'Back', rsvps_path %> </p>
+		<p><%= link_to('Back', rsvps_path(sort_by: params[:sort_by], order_by: params[:order_by], show: params[:show])) %> </p>
 
 	</div>
 
