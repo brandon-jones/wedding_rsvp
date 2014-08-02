@@ -17,7 +17,7 @@
 			<h3 class="center-text">All Messages</h3>
 		<%= paginate @guestbooks %>
 			<div align="right">
-				<%= link_to('Export All', export_guestbooks_path) %>
+				<%= link_to('Export All', export_guestbooks_path, target: "_blank") %>
 			</div>
 		<table class="table table-striped table-bordered">
 			<%= render 'table', :post => @guestbooks %>

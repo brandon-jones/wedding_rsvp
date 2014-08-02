@@ -16,9 +16,8 @@ class GuestbooksController < ApplicationController
 
   def export
     @guestbook = Guestbook.all.reverse_order
-    Guestbook.generate_pdf
     # send_file "tmp/pdf/export.pdf", :type=>'text/pdf'
-    redirect_to manage_guestbooks_path
+    send_file Guestbook.generate_pdf
   end
 
   def flag
