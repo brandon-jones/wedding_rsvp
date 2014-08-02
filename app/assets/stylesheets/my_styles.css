@@ -13,7 +13,11 @@
 	border-radius: 8px;
 	max-width: 480px;
 }
-
+div.width-limiter {
+	max-width: 1500px;
+	margin-right: auto;
+	margin-left: auto;
+}
 #main-hotel-list {
 	padding-bottom: 40px;
 }

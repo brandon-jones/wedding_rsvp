@@ -15,31 +15,31 @@
 	<body>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-
-			<div id='header' class="row-fluid">
+		<div id="width-limiter2">
+			<div id='header' class="row width-limiter">
 				<div class="col-md-10 col-md-offset-1">
 					<%= image_tag("2.png", :alt => "banner", :id => 'top-image', class: 'img-responsive') %>
 				</div>
 			</div>
 
-			<div id='top-bar' class="row-fluid">
+			<div id='top-bar' class="row width-limiter">
 				<div class="col-md-10 col-md-offset-1">
 					<%= render partial: 'static_pages/top_bar' %>
 				</div>
 			</div>
 
-			<div class="row-fluid">
+			<div class="row width-limiter">
 				<div class="col-md-10 col-md-offset-1" id="main-body" >
 					<%= yield %>
 				</div>
 			</div>
 
-			<div id="footer" class="row-fluid">
+			<div id="footer" class="row width-limiter">
 				<div class="col-md-10 col-md-offset-1">
 					<%= image_tag("elephants.png", :alt => "banner", :id => 'top-image', class: 'img-responsive', id: 'footer-image') %>
 				</div>
 			</div>
-
+		</div>
 
 	</body>
 </html>
