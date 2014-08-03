@@ -57,6 +57,8 @@ group :development do
   gem 'meta_request'
   gem 'faker', '~> 1.4.1'
   gem 'awesome_print', '~> 1.2.0'
+  gem 'better_errors', '~> 1.1.0'
+  gem 'binding_of_caller', '~> 0.7.2'
 end
 
 # Use ActiveModel has_secure_password

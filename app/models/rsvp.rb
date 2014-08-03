@@ -26,7 +26,6 @@ class Rsvp < ActiveRecord::Base
   	end
 
     pdf = Prawn::Document.generate(file.path) do |pdf|
-      # rsvp.each_with_index do |message|
 	    pdf.text title, :size => 20
 	    pdf.text "Total Coming: #{total}"
 	    pdf.move_down 5
@@ -49,9 +48,6 @@ class Rsvp < ActiveRecord::Base
   end
 
   def self.export_csv(rsvp_for_export)
-  	# file = Tempfile.new('wedding', Rails.root.join('tmp'))
-
-
   	file = Tempfile.new('wedding', Rails.root.join('tmp'))
      file.write("Name,Contact,Attending,Party Size")
      file.write("\n")
