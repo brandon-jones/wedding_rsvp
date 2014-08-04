@@ -1,5 +1,5 @@
 $(document).ready ->
-  $(".carousel").carousel
+  $('.carousel').carousel()
 
   $('.notice').delay(4000).fadeOut(200);
 
