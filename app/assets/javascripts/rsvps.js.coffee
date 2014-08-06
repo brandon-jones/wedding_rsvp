@@ -4,7 +4,6 @@
 
 
 $(document).ready ->
-  console.log "do some work ready"
 
   col_click()
   
