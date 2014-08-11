@@ -101,11 +101,6 @@ nav.pagination{
 	padding: 20px 0px 20px 0px;
 }
 
-.center-div {
-	margin-left: auto;
-  margin-right: auto;
-}
-
 #grey-background {
 	margin: 10px 10px 10px 10px;
 	padding: 10px 10px 10px 10px;
@@ -116,15 +111,6 @@ nav.pagination{
 .warning {
 	margin-left: auto;
   margin-right: auto;
-}
-
-#rsvp_party_size {
-	margin-left: auto;
-  margin-right: auto;
-}
-
-#hotel-welcome {
-	padding: 20px 30px;
 }
 
 #footer-image{
@@ -145,12 +131,12 @@ h1 {
 
 @font-face {
 	font-family: "alger";
-	src: url("/assets/fonts/ALGER.TTG");
+	src: font-url("/assets/ALGER.TTG");
 }
 
 @font-face {
 	font-family: "goudos";
-	src: url("/assets/fonts/GOUDOS.TTG");
+	src: font-url("/assets/GOUDOS.TTG");
 }
 
 .font-large {
@@ -161,14 +147,6 @@ h1 {
 .font-medium {
 	font-size:1.2em;
 }
-
-a:link    {color:black;}
-a:visited {color:black;}
-a:hover   {
-	color:black;
-	background-color: transparent;
-}
-a:active  {color:black;}
 
 .no-hover {
 	background-color: transparent;

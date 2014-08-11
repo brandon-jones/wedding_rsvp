@@ -23,10 +23,20 @@
 }
 
 a.buttons-mine{
-	background-color: transparent;
+	background-color: transparent !important;
 	border: none;
 }
 
 a.buttons-mine:hover{
 	background-color: transparent !important;
+}
+
+
+#rsvp_party_size {
+	margin-left: auto;
+  margin-right: auto;
+}
+
+#hotel-welcome {
+	padding: 20px 30px;
 }
