@@ -5,7 +5,7 @@
   		<div class="col-md-12">
 				<h1 class="center-text">Guestbook</h1>
   			<div align="right">
-					<p><%= link_to('Admin', manage_guestbooks_path) %></p>
+					<p><%= link_to('Admin', manage_guestbooks_path, class: 'black') %></p>
 				</div>
 				<% flash.each do |name, msg| -%>
   				<%= content_tag :div, msg, class: "#{name} center-text" %>
@@ -14,10 +14,10 @@
 		</div>
 
 		<div id="grey-background" class="row">
-			<div class="col-md-5">
-				<%= image_tag("love_quote.jpg", :alt => "image", class: 'img-rounded img-responsive') %>
+			<div class="col-md-6">
+				<%= image_tag("love_quote.jpg", :alt => "image", class: 'img-rounded img-responsive love-quote') %>
 			</div>
-			<div class="col-md-5 col-md-offset-1">
+			<div class="col-md-5">
 				<%= render partial: 'form' %>
 			</div>
 		</div>

@@ -1,5 +1,45 @@
-.button-grouping {
-	background-color: transparent;
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+#top-nav-bar {
+	margin-bottom: 20px;
+	border: 1px solid;
+  border-radius: 10px;
+  background-image: url('ribbon.png');
+
+}
+
+#top-image {
+	display: block;
+	margin-left: auto;
+  margin-right: auto;
+	padding-top: 5px;
+}
+
+body {
+	background: #c9c9c9 url('background.png');
+}
+
+#main-body {
+	background: #c9c9c9 url('main_background.png');
+	border: 1px solid;
+  border-radius: 25px;
+  min-height: 650px;
+}
+
+.black {
+	color: black;
 }
 
 .notice {
@@ -12,11 +52,6 @@
 	padding-bottom: 8px;
 	border-radius: 8px;
 	max-width: 480px;
-}
-
-div.width-limiter {
-	margin-right: auto;
-	margin-left: auto;
 }
 
 #main-hotel-list {
@@ -39,14 +74,6 @@ div#my-form {
   text-align: center;
 }
 
-div#my-home-form {
-	background-color: white;
-	padding: 20px 20px;
-  border-radius: 10px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
 div.carousel {
 	margin-left: auto;
   margin-right: auto;
@@ -54,10 +81,6 @@ div.carousel {
   margin-bottom: 40px;
   max-width: 480px;
   max-height: 640px;
-}
-
-#new_guestbook {
-	padding-top: 20px;
 }
 
 img.my-images {
@@ -101,16 +124,21 @@ nav.pagination{
 	padding: 20px 0px 20px 0px;
 }
 
+li a.buttons-mine{
+	background-color: transparent;
+	color: black;
+	border: none;
+}
+
+li a.buttons-mine:hover{
+	background-color: transparent;
+}
+
 #grey-background {
 	margin: 10px 10px 10px 10px;
 	padding: 10px 10px 10px 10px;
 	background-color: #c9c9c9;
 	border-radius: 5px;
-}
-
-.warning {
-	margin-left: auto;
-  margin-right: auto;
 }
 
 #footer-image{
@@ -119,6 +147,7 @@ nav.pagination{
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 p {
@@ -146,10 +175,6 @@ h1 {
 
 .font-medium {
 	font-size:1.2em;
-}
-
-.no-hover {
-	background-color: transparent;
 }
 
 a.map-link:link {color: blue;}

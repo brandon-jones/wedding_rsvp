@@ -2,16 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// #guestbook-form {
-// 	display: block;
-// 	border: 1px solid;
-//   border-radius: 25px;
-//   padding: 20px 20px;
-// }
-
 .guestbook-message {
 	margin-bottom:20px;
   border-radius: 25px;
   background-color: #ffffff;
   padding: 10px 10px;
+}
+
+img.love-quote {
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
