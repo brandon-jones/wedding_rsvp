@@ -5,7 +5,7 @@
   		<div class="col-md-12">
 				<h1 class="center-text">Guestbook</h1>
   			<div align="right">
-					<p><%= link_to('Admin', manage_guestbooks_path, class: 'black') %></p>
+					<p><%= link_to('Admin', manage_guestbooks_path, class: 'black-href') %></p>
 				</div>
 				<% flash.each do |name, msg| -%>
   				<%= content_tag :div, msg, class: "#{name} center-text" %>
@@ -17,7 +17,7 @@
 			<div class="col-md-6">
 				<%= image_tag("love_quote.jpg", :alt => "image", class: 'img-rounded img-responsive love-quote') %>
 			</div>
-			<div class="col-md-5">
+			<div class="col-md-6">
 				<%= render partial: 'form' %>
 			</div>
 		</div>
@@ -35,10 +35,10 @@
 		  		<div class="col-md-1">
 			    	<div title="Report for inapropriate content"><p><%= flag_status(guestbook)%></p></div>
 			    </div>
-			    <div class="col-md-9">
+			    <div class="col-md-7">
 			    	<div><b><p><%= guestbook.name %></p></b></div>
 			    </div>
-			    <div class="col-md-2">
+			    <div class="col-md-3">
 			    	<div><i><p><%= local_time(guestbook.created_at) %></p></i></div>
 			    </div>
 			    <div class="row">

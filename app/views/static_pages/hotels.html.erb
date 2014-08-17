@@ -16,7 +16,7 @@
 
 		<div class="row hotel-list">
 			<div class="col-md-2" >
-				<%= image_tag("hotel_images/#{hotel['logo']}", size: "160x100") %>
+				<%= image_tag("hotel_images/#{hotel['logo']}", class: 'hotel-images') %>
 			</div>
 
 			<div class="col-md-6">
@@ -34,7 +34,7 @@
 			</div>
 
 			<div class="col-md-2">
-			  <%= image_tag("hotel_images/#{hotel['image']}", size: "160x100") %>
+			  <%= image_tag("hotel_images/#{hotel['image']}", class: 'hotel-images') %>
 			</div>
 
 			<div class="col-md-2">
@@ -45,7 +45,7 @@
 
 			<% if index == 0 %>
 				<div class="row">
-					<div class="col-md-8 col-md-offset-2 hotel-notice">
+					<div class="col-md-10 col-md-offset-1 hotel-notice">
 						<div class="warning">
 							<div class="panel panel-danger">
 								<div class="panel-heading">
