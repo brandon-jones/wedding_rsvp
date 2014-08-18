@@ -40,8 +40,8 @@
             <td><p><%= rsvp.contact %></p></td>
             <td><p><%= noramlize_bool(rsvp.attending) %></p></td>
             <td><p><%= rsvp.party_size %></p></td>
-            <td><p><%= link_to 'Edit', "/rsvps/#{rsvp.id}/edit?sort_by=#{params[:sort_by]}&order_by=#{params[:order_by]}&show=#{params[:show]}" %></p></td>
-            <td><p><%= link_to 'Destroy', "/rsvps/#{rsvp.id}?sort_by=#{params[:sort_by]}&order_by=#{params[:order_by]}&show=#{params[:show]}", method: :delete, data: { confirm: 'Are you sure?' } %></p></td>
+            <td><p><%= link_to 'Edit', "/rsvps/#{rsvp.id}/edit?sort_by=#{params[:sort_by]}&order_by=#{params[:order_by]}&show=#{params[:show]}", class: 'map-link' %></p></td>
+            <td><p><%= link_to 'Destroy', "/rsvps/#{rsvp.id}?sort_by=#{params[:sort_by]}&order_by=#{params[:order_by]}&show=#{params[:show]}", method: :delete, class: 'map-link',data: { confirm: 'Are you sure?' } %></p></td>
           </tr>
         <% end %>
       </tbody>

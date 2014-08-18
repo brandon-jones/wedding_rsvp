@@ -79,11 +79,10 @@ div.carousel {
   max-height: 640px;
 }
 
-img.my-images {
+.my-images {
 	margin-left: auto;
   margin-right: auto;
   border: 1px solid;
-  border-radius: 5px;
   padding: 10px 10px;
 }
 
@@ -163,13 +162,21 @@ h1 {
 }
 
 @font-face {
-	font-family: "alger";
-	src: font-url("/assets/ALGER.TTG");
+  font-family: "alger";
+  src: font-url("/assets/alger-webfont.eot"); /* IE 5-8 */ 
+  src: local('☺'),             /* sneakily trick IE */
+        font-url('alger-webfont.woff') format('woff'),    /* FF 3.6, Chrome 5, IE9 */
+        font-url('alger-webfont.ttf') format('truetype'), /* Opera, Safari */
+        font-url('alger-webfont.svg#font') format('svg'); /* iOS */
 }
 
 @font-face {
-	font-family: "goudos";
-	src: font-url("/assets/GOUDOS.TTG");
+  font-family: "goudos";
+  src: font-url("/assets/goudos-webfont.eot"); /* IE 5-8 */ 
+  src: local('☺'),             /* sneakily trick IE */
+        font-url('goudos-webfont.woff') format('woff'),    /* FF 3.6, Chrome 5, IE9 */
+        font-url('goudos-webfont.ttf') format('truetype'), /* Opera, Safari */
+        font-url('goudos-webfont.svg#font') format('svg'); /* iOS */
 }
 
 .font-large {
@@ -195,3 +202,9 @@ a:active {color: black;}
 	padding: 0px 0px 0px 0px;
 }
 
+.list-item {
+	margin: 20px 20px;
+	border-radius: 25px;
+	background-color: #ffffff;
+	padding: 10px 10px;
+}
