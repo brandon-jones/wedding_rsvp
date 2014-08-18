@@ -12,14 +12,14 @@
 <tbody>
   <% post.each do |guestbook| %>
     <tr>
-      <td><%= guestbook.name %></td>
-      <td><%= guestbook.created_at.to_formatted_s(:short) %></td>
-      <td><%= guestbook.message %></td>
-      <td><%= link_to 'Destroy', guestbook, method: :delete,class: 'map-link', data: { confirm: 'Are you sure?' } %></td>
+      <td><p><%= guestbook.name %></p></td>
+      <td><p><%= guestbook.created_at.to_formatted_s(:short) %></p></td>
+      <td><p><%= guestbook.message %></p></td>
+      <td><p><%= link_to 'Destroy', guestbook, method: :delete,class: 'map-link', data: { confirm: 'Are you sure?' } %></p></td>
       <% if guestbook.flag == true %>
-      <td><%= link_to 'Approve', approve_guestbook_path(guestbook.id), class: 'map-link' %></td>
+      <td><p><%= link_to 'Approve', approve_guestbook_path(guestbook.id), class: 'map-link' %></p></td>
       <% else %>
-      <td>Approved</td>
+      <td><p>Approved</p></td>
       <% end %>
     </tr>
   <% end %>
