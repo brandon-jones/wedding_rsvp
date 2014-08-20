@@ -52,9 +52,9 @@ $(document).ready(function(){
 					if($(this).closest('nav').hasClass('s-collapse'))
 					{
 						ul.find('ul').hide();
-						ul.find('a .s-collapse-trigger').removeClass('active').html('<i class="fa fa-plus-square fa-2x"></i>');
-						if(ul.is(':hidden')){ $(this).find('.s-collapse-trigger').addClass('active').html('<i class="fa fa-minus-square fa-2x"></i>'); }
-						else{ $(this).find('.s-collapse-trigger').removeClass('active').html('<i class="fa fa-plus-square fa-2x"></i>'); }
+						ul.find('a .s-collapse-trigger').removeClass('active').html('<i class="fa fa-chevron-down fa-2x"></i>');
+						if(ul.is(':hidden')){ $(this).find('.s-collapse-trigger').addClass('active').html('<i class="fa fa-chevron-up fa-2x"></i>'); }
+						else{ $(this).find('.s-collapse-trigger').removeClass('active').html('<i class="fa fa-chevron-down fa-2x"></i>'); }
 						ul.slideToggle(100);		
 					}	
 				});
@@ -64,8 +64,8 @@ $(document).ready(function(){
 				nav.find('.s-collapse-trigger').click(function(e){
 					e.preventDefault();
 					var nav = $(this).siblings('.nav-menu');
-					if(nav.is(':hidden')){ $(this).addClass('active').html('<i class="fa fa-minus-square fa-2x"></i>'); }
-					else{ $(this).removeClass('active').html('<i class="fa fa-plus-square fa-2x"></i>'); } 
+					if(nav.is(':hidden')){ $(this).addClass('active').html('<i class="fa fa-chevron-up fa-2x"></i>'); }
+					else{ $(this).removeClass('active').html('<i class="fa fa-chevron-down fa-2x"></i>'); } 
 					$(this).siblings('.nav-menu').slideToggle();
 				});
 				
@@ -89,14 +89,14 @@ $(document).ready(function(){
 							nav.addClass('s-collapse', 300);
 							el.find('ul').hide();
 							el.hide();
-							nav.find('.s-collapse-trigger').removeClass('active').html('<i class="fa fa-plus-square fa-2x"></i>');
+							nav.find('.s-collapse-trigger').removeClass('active').html('<i class="fa fa-chevron-down fa-2x"></i>');
 						}	
 					}
 					else
 					{
 						if(nav.hasClass('s-collapse'))
 						{
-							nav.find('.s-collapse-trigger:last').addClass('active').html('<i class="fa fa-minus-square fa-2x"></i>');		
+							nav.find('.s-collapse-trigger:last').addClass('active').html('<i class="fa fa-chevron-up fa-2x"></i>');		
 							nav.removeClass('s-collapse', 300);			
 							el.find('ul').show();
 							el.fadeIn();					
