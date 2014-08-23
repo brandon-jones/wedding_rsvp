@@ -16,10 +16,11 @@
       <td><p><%= guestbook.created_at.to_formatted_s(:short) %></p></td>
       <td><p><%= guestbook.message %></p></td>
       <td><p><%= link_to 'Destroy', guestbook, method: :delete,class: 'map-link', data: { confirm: 'Are you sure?' } %></p></td>
-      <% if guestbook.flag == true %>
-      <td><p><%= link_to 'Approve', approve_guestbook_path(guestbook.id), class: 'map-link' %></p></td>
+      <%= binding.pry %>
+      <% if guestbook.flag == false || %>
+        <td><p>Approved</p></td>
       <% else %>
-      <td><p>Approved</p></td>
+        <td><p><%= link_to 'Approve', approve_guestbook_path(guestbook.id), class: 'map-link' %></p></td>
       <% end %>
     </tr>
   <% end %>
