@@ -3,13 +3,16 @@
 		<h1 class="center-text body-title">Managing Guestbook</h1>
 
 		<% if @flagged.count > 0 %>
-		<div id="my-boarder">
-			<h3 class="center-text">Flagged Messages</h3>
-			<table class="table table-bordered">
-				<%= render 'table', :post => @flagged %>
-			</table>
-		</div>
+			<div id="my-boarder">
+				<h3 class="center-text">Flagged Messages</h3>
+
+				<table class="table table-bordered">
+					<%= render 'table', :post => @flagged %>
+				</table>
+				
+			</div>
 			<br/>
+
 		<% end %>
 
 			<h3 class="center-text">All Messages</h3>
