@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <title>Zack and Katie Forever</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	  <!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -19,31 +20,28 @@
 	</head>
 
 	<body>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-		<div id="width-limiter2">
-			<div id='header' class="row width-limiter">
-				<div class="col-md-10 col-md-offset-1">
-					<%= image_tag("2.png", :alt => "banner", :id => 'top-image', class: 'img-responsive') %>
-				</div>
+		<div id='header' class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<%= image_tag("top_image.png", :alt => "banner", :id => 'top-image', class: 'img-responsive') %>
 			</div>
+		</div>
 
-			<div id='top-bar' class="row width-limiter">
-				<div class="col-md-10 col-md-offset-1">
-					<%= render partial: 'static_pages/top_bar' %>
-				</div>
+		<div id='top-bar' class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<%= render partial: 'static_pages/top_bar' %>
 			</div>
+		</div>
 
-			<div class="row width-limiter">
-				<div class="col-md-10 col-md-offset-1" id="main-body" >
-					<%= yield %>
-				</div>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2" id="main-body" >
+				<%= yield %>
 			</div>
+		</div>
 
-			<div id="footer" class="row">
-				<div class="col-md-10 col-md-offset-1">
-					<%= image_tag("elephants.png", :alt => "banner", :id => 'top-image', class: 'img-responsive', id: 'footer-image') %>
-				</div>
+		<div id="footer" class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<%= image_tag("elephants.png", :alt => "banner", class: 'img-responsive', id: 'footer-image') %>
 			</div>
 		</div>
 

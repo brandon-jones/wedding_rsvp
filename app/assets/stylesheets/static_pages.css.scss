@@ -1,10 +1,6 @@
-.hotel-list {
-	padding: 10px 10px;
-	margin: 20px 20px;
-	background-color: white;
-	border: 1px solid;
-  border-radius: 25px;
-}
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 
 .hotel-notice {
 	margin-top: 20px;
@@ -12,21 +8,23 @@
 
 .warning {
 	color: red;
+	margin-left: auto;
+  margin-right: auto;
 }
 
-#top-nav-bar {
-	margin-bottom: 20px;
-	border: 1px solid;
+#hotel-welcome {
+	padding: 20px 30px;
+}
+
+div#my-home-form {
+	background-color: white;
+	padding: 20px 20px;
   border-radius: 10px;
-  background-image: asset-url('ribbon3.png');
-
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-a.buttons-mine{
-	background-color: transparent;
-	border: none;
-}
-
-a.buttons-mine:hover{
-	background-color: transparent !important;
+.hotel-images {
+	width: 140px;
+	height: auto;
 }

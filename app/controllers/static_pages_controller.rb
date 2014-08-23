@@ -3,7 +3,6 @@ class StaticPagesController < ApplicationController
   # For APIs, you may want to use :null_session instead.
   def index
     @guestbooks = Guestbook.all.reverse_order.limit(5) || []
-    @blogs = [Blog.last] || []
   end
 
   def contact

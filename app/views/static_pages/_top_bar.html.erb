@@ -1,12 +1,92 @@
-<div class="test">
-  <div id="top-nav-bar">
-  <ul class="nav nav-pills row">
-    <li class="col-md-2 col-md-offset-1"><a href="<%= root_path %>" class="no-hover btn btn-default navbar-btn btn-med buttons-mine shadow-radial"><p class="font-large">Home</p></a></li>
-    <li class="col-md-2"><a href="<%= new_rsvp_path %>" class="no-hover btn btn-default navbar-btn btn-med buttons-mine shadow-radial"><p class="font-large">RSVP</p></a></li>
-    <!-- <li class="col-md-2"><a href="<%= contact_path %>" class="no-hover btn btn-default navbar-btn btn-med buttons-mine shadow-radial"><p class="font-large">Contact</p></a></li> -->
-    <li class="col-md-2"><a href="<%= registry_path %>" class="no-hover btn btn-default navbar-btn btn-med buttons-mine shadow-radial"><p class="font-large">Registry</p></a></li>
-    <li class="col-md-2"><a href="<%= guestbooks_path %>" class="no-hover btn btn-default navbar-btn btn-med buttons-mine shadow-radial"><p class="font-large">Guestbook</p></a></li>
-    <li class="col-md-2"><a href="<%= hotels_path %>" class="no-hover btn btn-default navbar-btn btn-med buttons-mine shadow-radial"><p class="font-large">Hotels</p></a></li>
-  </ul>
-</div>
+<div id="top-nav-bar">
+
+  <nav class="fixed-top hidden-sm hidden-md hidden-lg">
+      <div class="nav-menu slideDown w-divider">
+        <ul>
+
+          <li>
+            <button type="button" class="btn no-background remove-padding shadow-radial">
+              <a href="<%= root_path %>" class="black-href"><p class="font-large">Home</p></a>
+            </button> 
+          </li>
+
+          <li>
+            <button type="button" class="btn no-background remove-padding shadow-radial">
+              <a href="<%= new_rsvp_path %>" class="black-href"><p class="font-large">RSVP</p></a>
+            </button> 
+          </li>
+
+          <li>
+            <button type="button" class="btn no-background remove-padding shadow-radial">
+              <a href="<%= registry_path %>" class="black-href"><p class="font-large">Registry</p></a>
+            </button> 
+          </li>
+
+          <!-- <li>
+            <button type="button" class="btn no-background remove-padding shadow-radial">
+              <a href="<%= contact_path %>" class="black-href"><p class="font-large">Contact</p></a>
+            </button> 
+          </li> -->
+
+          <li>
+            <button type="button" class="btn no-background remove-padding shadow-radial">
+              <a href="<%= guestbooks_path %>" class="black-href"><p class="font-large">Guestbook</p></a>
+            </button> 
+          </li>
+
+          <li>
+            <button type="button" class="btn no-background remove-padding shadow-radial">
+              <a href="<%= hotels_path %>" class="black-href"><p class="font-large">Hotels</p></a>
+            </button> 
+          </li>
+
+        </ul>
+      </div>   
+      <a class="s-button s-collapse-trigger" href="#"><i class="fa fa-chevron-down fa-2x"></i></a>
+  </nav>
+
+    <!-- *************************** -->
+    <!-- Show this on larger screens -->
+    <!-- *************************** -->
+
+  <nav class="hidden-xs">
+    <div class="btn-group btn-group-justified padding-5"> 
+
+      <div class="btn-group">
+        <button type="button" class="btn no-background remove-padding shadow-radial">
+          <a href="<%= root_path %>" class="black-href"><p class="font-large">Home</p></a>
+        </button> 
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="btn no-background remove-padding shadow-radial">
+          <a href="<%= new_rsvp_path %>" class="black-href"><p class="font-large">RSVP</p></a>
+        </button> 
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="btn no-background remove-padding shadow-radial">
+          <a href="<%= registry_path %>" class="black-href"><p class="font-large">Registry</p></a>
+        </button> 
+      </div>
+
+      <!-- <div class="btn-group">
+        <button type="button" class="btn no-background remove-padding shadow-radial">
+          <a href="<%= contact_path %>" class="black-href"><p class="font-large">Contact</p></a>
+        </button> 
+      </div> -->
+
+      <div class="btn-group">
+        <button type="button" class="btn no-background remove-padding shadow-radial">
+          <a href="<%= guestbooks_path %>" class="black-href"><p class="font-large">Guestbook</p></a>
+        </button> 
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="btn no-background remove-padding shadow-radial">
+          <a href="<%= hotels_path %>" class="black-href"><p class="font-large">Hotels</p></a>
+        </button> 
+      </div>
+    </div>
+  </nav>
 </div>
