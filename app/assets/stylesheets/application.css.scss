@@ -17,8 +17,31 @@
 	border: 1px solid;
   border-radius: 10px;
   background-image: url('ribbon.png');
+}
+
+#top-nav-bar-expanded {
+	margin-bottom: 20px;
+	border: 1px solid;
+  border-radius: 10px;
+  background-image: url('ribbon.png');
   
 }
+
+.center-top-bar {
+	width: 18%
+}
+
+.top-margin {
+	margin-top: 10px;
+}
+
+#top-nav-bar-expanded ul li { 
+		display: inline; 
+  	text-align: center;
+  	font-family: "goudos";
+  	font-size: 1.8em;
+  }
+
 
 i.fa {
 	padding-left: 10px;
@@ -217,4 +240,34 @@ a:active {color: black;}
 	border-radius: 25px;
 	background-color: #ffffff;
 	padding: 10px 10px;
+}
+
+
+
+#centeredmenu {
+   float:left;
+   width:100%;
+   overflow:hidden;
+   position:relative;
+}
+#centeredmenu ul {
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+   left:50%;
+   text-align:center;
+}
+#centeredmenu ul li {
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+   right:50%;
+}
+#centeredmenu ul li a {
+   margin:0 0 0 1px;
+   padding:3px 10px;
+   text-decoration:none;
+   line-height:1.3em;
 }

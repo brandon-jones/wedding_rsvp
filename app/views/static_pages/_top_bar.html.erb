@@ -1,80 +1,57 @@
-<div id="top-nav-bar">
 
-  <nav class="fixed-top hidden-sm hidden-md hidden-lg">
-      <div class="nav-menu slideDown w-divider">
-        <ul>
+<nav class="fixed-top hidden-sm hidden-md hidden-lg" id="top-nav-bar">
+  <ul class="top-margin">
 
-          <li>
-            <input type="button" class="btn no-background remove-padding shadow-radial">
-              <a href="<%= root_path %>" class="black-href"><p class="font-large">Home</p></a>
-            </input>
-          </li>
+    <li>
+      <a href="<%= root_path %>" class="black-href"><p class="font-large shadow-radial">Home</p></a>
+    </li>
 
-          <li>
-            <input type="button" class="btn no-background remove-padding shadow-radial">
-              <a href="<%= new_rsvp_path %>" class="black-href"><p class="font-large">RSVP</p></a>
-            </input>
-          </li>
+    <li>
+      <a href="<%= new_rsvp_path %>" class="black-href"><p class="font-large shadow-radial">RSVP</p></a>
+    </li>
 
-          <li>
-            <input type="button" class="btn no-background remove-padding shadow-radial">
-              <a href="<%= registry_path %>" class="black-href"><p class="font-large">Registry</p></a>
-            </input>
-          </li>
+    <li>
+      <a href="<%= registry_path %>" class="black-href"><p class="font-large shadow-radial">Registry</p></a>
+    </li>
 
-          <li>
-            <input type="button" class="btn no-background remove-padding shadow-radial">
-              <a href="<%= guestbooks_path %>" class="black-href"><p class="font-large">Guestbook</p></a>
-            </input>
-          </li>
+    <li>
+      <a href="<%= guestbooks_path %>" class="black-href"><p class="font-large shadow-radial">Guestbook</p></a>
+    </li>
 
-          <li>
-            <input type="button" class="btn no-background remove-padding shadow-radial">
-              <a href="<%= hotels_path %>" class="black-href"><p class="font-large">Hotels</p></a>
-            </input>
-          </li>
+    <li>
+      <a href="<%= hotels_path %>" class="black-href"><p class="font-large shadow-radial">Hotels</p></a>
+    </li>
 
-        </ul>
-      </div>   
-      <a class="s-button s-collapse-trigger" href="#"><i class="fa fa-chevron-down fa-2x"></i></a>
-  </nav>
+  </ul>  
+    <a class="s-button s-collapse-trigger" href="#"><i class="fa fa-chevron-down fa-2x"></i></a>
+</nav>
+  <!-- *************************** -->
+  <!-- Show this on larger screens -->
+  <!-- *************************** -->
 
-    <!-- *************************** -->
-    <!-- Show this on larger screens -->
-    <!-- *************************** -->
+<nav class="hidden-xs" id="top-nav-bar-expanded">
+  
+  <ul class="top-margin">
 
-  <nav class="hidden-xs">
-    <div class="btn-group btn-group-justified padding-5"> 
+    <li>
+      <a href="<%= root_path %>" class="black-href shadow-radial center-top-bar">Home</a>
+    </li>
 
-      <div class="btn-group">
-        <input type="button" class="btn no-background remove-padding shadow-radial">
-          <a href="<%= root_path %>" class="black-href"><p class="font-large">Home</p></a>
-        </input> 
-      </div>
+    <li>
+      <a href="<%= new_rsvp_path %>" class="black-href shadow-radial center-top-bar">RSVP</a>
+    </li>
 
-      <div class="btn-group">
-        <input type="button" class="btn no-background remove-padding shadow-radial">
-          <a href="<%= new_rsvp_path %>" class="black-href"><p class="font-large">RSVP</p></a>
-        </input> 
-      </div>
+    <li>
+      <a href="<%= registry_path %>" class="black-href shadow-radial center-top-bar">Registry</a>
+    </li>
 
-      <div class="btn-group">
-        <input type="button" class="btn no-background remove-padding shadow-radial">
-          <a href="<%= registry_path %>" class="black-href"><p class="font-large">Registry</p></a>
-        </input> 
-      </div>
+    <li>
+      <a href="<%= guestbooks_path %>" class="black-href shadow-radial center-top-bar">Guestbook</a>
+    </li>
 
-      <div class="btn-group">
-        <input type="button" class="btn no-background remove-padding shadow-radial">
-          <a href="<%= guestbooks_path %>" class="black-href"><p class="font-large">Guestbook</p></a>
-        </input> 
-      </div>
+    <li>
+      <a href="<%= hotels_path %>" class="black-href shadow-radial center-top-bar">Hotels</a>
+    </li>
 
-      <div class="btn-group">
-        <input type="button" class="btn no-background remove-padding shadow-radial">
-          <a href="<%= hotels_path %>" class="black-href"><p class="font-large">Hotels</p></a>
-        </input> 
-      </div>
-    </div>
-  </nav>
-</div>
+  </ul>  
+</nav>
