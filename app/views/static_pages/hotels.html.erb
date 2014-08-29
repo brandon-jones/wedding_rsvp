@@ -15,11 +15,11 @@
 	<% @hotels.each_with_index do |hotel,index| %>
 
 		<div class="row list-item">
-			<div class="col-md-2" >
+			<div class="col-md-3" >
 				<%= image_tag("hotel_images/#{hotel['logo']}", class: 'hotel-images') %>
 			</div>
 
-			<div class="col-md-6">
+			<div class="col-md-4">
 				<p>
 					<b><%= hotel['name'] %></b>
 					</br>
@@ -33,11 +33,11 @@
 				</p>
 			</div>
 
-			<div class="col-md-2">
+			<div class="col-md-3">
 			  <%= image_tag("hotel_images/#{hotel['image']}", class: 'hotel-images') %>
 			</div>
 
-			<div class="col-md-2">
+			<div class="col-md-1">
 				<p>
 			  	<%= link_to('Map',map_url(hotel['address']),:target => "_blank", class: 'map-link') %> </br></br> <%= link_to('Reservations',hotel['link_to_reservation'],:target => "_blank", class: 'map-link') %>
 			  </p>
