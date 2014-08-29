@@ -19,29 +19,28 @@
   background-image: url('ribbon.png');
 }
 
-#top-nav-bar-expanded {
-	margin-bottom: 20px;
-	border: 1px solid;
-  border-radius: 10px;
-  background-image: url('ribbon.png');
-  
+
+#wedding-bar {
+	ul {
+		width: 100%;
+		li {
+			display: inline;
+			margin-right: auto;
+			margin-left: 3%;
+			a {
+				padding: 0px 0px 0px 0px;
+				p{
+					padding-top: 5px;
+					padding-bottom: 5px;
+					width: 112px;
+					text-align: center;
+					margin-top: 6px;
+					margin-bottom: 6px;
+				}
+			}
+		}
+	}
 }
-
-.center-top-bar {
-	width: 18%
-}
-
-.top-margin {
-	margin-top: 10px;
-}
-
-#top-nav-bar-expanded ul li { 
-		display: inline; 
-  	text-align: center;
-  	font-family: "goudos";
-  	font-size: 1.8em;
-  }
-
 
 i.fa {
 	padding-left: 10px;
@@ -226,6 +225,9 @@ a.map-link:visited {color: blue;}
 a.map-link:hover {color: black;}
 a.map-link:active {color: blue;}
 
+
+
+
 a:link {color: black;}
 a:visited {color: black;}
 a:hover {color: black; text-decoration: none;}
@@ -245,10 +247,14 @@ a:active {color: black;}
 
 
 #centeredmenu {
-   float:left;
-   width:100%;
-   overflow:hidden;
-   position:relative;
+  float:left;
+  width:100%;
+  overflow:hidden;
+  position:relative;
+	margin-bottom: 20px;
+	border: 1px solid;
+  border-radius: 10px;
+  background-image: url('ribbon.png');
 }
 #centeredmenu ul {
    list-style:none;
@@ -261,7 +267,7 @@ a:active {color: black;}
 #centeredmenu ul li {
    list-style:none;
    margin:0;
-   padding:0;
+   padding: 8px 25px 8px 0px;
    position:relative;
    right:50%;
 }
@@ -270,4 +276,5 @@ a:active {color: black;}
    padding:3px 10px;
    text-decoration:none;
    line-height:1.3em;
+   color: black;
 }
