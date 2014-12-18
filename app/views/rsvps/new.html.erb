@@ -1,0 +1,21 @@
+<div class="row-fluid">
+  <div class="col-md-6 col-md-offset-3" id="my-form">
+
+		<h1 class="center-text">RSVP</h1>
+
+		<div align="right">
+		  <p><%= link_to('Admin', rsvps_path, class: 'black' )%></p>
+		</div>
+
+		<div class="center-text">
+			<% flash.each do |name, msg| -%>
+	  		<%= content_tag :div, msg, class: name, id: 'top-notice' %>
+			<% end -%>
+		</div>
+
+		<%= render 'form' %>
+		<p>If you made an error when filling out the RSVP form, please email zkForever.am@gmail.com</p>
+	</div>
+
+	</div>
+</div>

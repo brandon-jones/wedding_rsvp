@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-WeddingRsvp::Application.config.secret_key_base = 'f922fc0b8843eb2974032d2870c2e6f9ed2bd7b44091b5b0ee45923d4939c11b8dd7eeaa9d7f867e14c66304ad082120d41674d83e46378e6af4e88720d83a3a'
+WeddingRsvp::Application.config.secret_key_base = ENV["ZK_SECRETKEY"]

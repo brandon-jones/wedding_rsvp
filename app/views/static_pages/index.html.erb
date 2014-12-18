@@ -1,0 +1,24 @@
+
+<div class="row-fluid">
+
+	<div id="my-home-form" class="col-md-8 col-md-offset-2 center-text">
+		<% flash.each do |name, msg| -%>
+  		<%= content_tag :div, msg, class: name, id: 'top-notice' %>
+		<% end -%>
+		<div class="">
+			<%= render 'image_carousel' %>
+		</div>
+		<p class="font-medium"><b>Wedding Location:</b> 30301 Sheeptrail Ct, Tehachapi CA, 93561 - <small><%= link_to('MAP','http://www.google.com/maps/place/30301+Sheeptrail+Ct,+Tehachapi,+CA+93561' ,:target => "_blank", class: 'map-link') %></small></p>
+		</br></br>
+		<p class="font-medium"><b>Date:</b> August 30, 2014</p>
+		</br></br>
+		<p class="font-medium"><b>Start Time:</b> 6pm</p>
+		</br></br>
+		<p class="font-medium">Please RSVP and sign the digital guestbook!</p>
+		</br></br>
+		<p class="font-medium">If you made an error when filling out the RSVP form, please email zkForever.am@gmail.com</p>
+		</br></br>
+	</div>
+
+</div>
+

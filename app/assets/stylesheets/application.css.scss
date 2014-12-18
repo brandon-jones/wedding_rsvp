@@ -1,0 +1,280 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+#top-nav-bar {
+	margin-bottom: 20px;
+	border: 1px solid;
+  border-radius: 10px;
+  background-image: url('ribbon.png');
+}
+
+
+#wedding-bar {
+	ul {
+		width: 100%;
+		li {
+			display: inline;
+			margin-right: auto;
+			margin-left: 3%;
+			a {
+				padding: 0px 0px 0px 0px;
+				p{
+					padding-top: 5px;
+					padding-bottom: 5px;
+					width: 112px;
+					text-align: center;
+					margin-top: 6px;
+					margin-bottom: 6px;
+				}
+			}
+		}
+	}
+}
+
+i.fa {
+	padding-left: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+#top-image {
+	display: block;
+	margin-left: auto;
+  margin-right: auto;
+	padding-top: 5px;
+}
+
+body {
+	background: #c9c9c9 url('background.png');
+}
+
+#main-body {
+	background: #c9c9c9 url('main_background.png');
+	border: 1px solid;
+  border-radius: 25px;
+  min-height: 650px;
+}
+
+.notice {
+	font-size: 1.3em;
+	border: 1px solid;
+	background-color: #b8b8b8;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border-radius: 8px;
+	max-width: 480px;
+}
+
+#main-hotel-list {
+	padding-bottom: 40px;
+}
+
+i.flag {
+	color: #d6d6d6;
+}
+
+div#my-form {
+	background-color: white;
+	padding: 20px 20px;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+div.carousel {
+	margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  max-width: 480px;
+  max-height: 640px;
+}
+
+.my-images {
+	margin-left: auto;
+  margin-right: auto;
+  border: 1px solid;
+  padding: 10px 10px;
+}
+
+#my-boarder {
+	background-color: #ff9999;
+  border: 1px solid;
+}
+
+.white-background {
+	background-color: white;
+	border-radius: 5px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+nav.pagination{
+	background-color: white;
+	border-radius: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	min-height:20px;
+}
+
+.page {
+	padding: 10px 10px;
+	font-size: 1.2em;
+}
+
+.padding-5 {
+	padding: 5px 0px 5px 0px;
+}
+
+.page.current {
+	color:grey;
+}
+
+.body-title {
+	padding: 20px 0px 20px 0px;
+}
+
+li a.buttons-mine{
+	background-color: transparent;
+	color: black;
+	border: none;
+}
+
+li a.buttons-mine:hover{
+	background-color: transparent;
+}
+
+#grey-background {
+	margin: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+	background-color: #c9c9c9;
+	border-radius: 5px;
+}
+
+#footer-image{
+	max-width: 140px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.no-background {
+	background-color: transparent;
+}
+
+p {
+	font-family: "goudos";
+}
+
+h1 {
+	font-family: "alger";
+}
+
+@font-face {
+  font-family: "alger";
+  src: font-url("/assets/alger-webfont.eot"); /* IE 5-8 */ 
+  src: local('☺'),             /* sneakily trick IE */
+        font-url('alger-webfont.woff') format('woff'),    /* FF 3.6, Chrome 5, IE9 */
+        font-url('alger-webfont.ttf') format('truetype'), /* Opera, Safari */
+        font-url('alger-webfont.svg#font') format('svg'); /* iOS */
+}
+
+@font-face {
+  font-family: "goudos";
+  src: font-url("/assets/goudos-webfont.eot"); /* IE 5-8 */ 
+  src: local('☺'),             /* sneakily trick IE */
+        font-url('goudos-webfont.woff') format('woff'),    /* FF 3.6, Chrome 5, IE9 */
+        font-url('goudos-webfont.ttf') format('truetype'), /* Opera, Safari */
+        font-url('goudos-webfont.svg#font') format('svg'); /* iOS */
+}
+
+.font-large {
+	font-size:1.8em;
+	margin: 0px 0px 0px 0px;
+}
+
+.font-medium {
+	font-size:1.2em;
+}
+
+a.map-link:link {color: blue;}
+a.map-link:visited {color: blue;}
+a.map-link:hover {color: black;}
+a.map-link:active {color: blue;}
+
+
+
+
+a:link {color: black;}
+a:visited {color: black;}
+a:hover {color: black; text-decoration: none;}
+a:active {color: black;}
+
+.remove-padding {
+	padding: 0px 0px 0px 0px;
+}
+
+.list-item {
+	margin: 20px 20px;
+	border-radius: 25px;
+	background-color: #ffffff;
+	padding: 10px 10px;
+}
+
+
+
+#centeredmenu {
+  float:left;
+  width:100%;
+  overflow:hidden;
+  position:relative;
+	margin-bottom: 20px;
+	border: 1px solid;
+  border-radius: 10px;
+  background-image: url('ribbon.png');
+}
+#centeredmenu ul {
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+   left:50%;
+   text-align:center;
+}
+#centeredmenu ul li {
+   list-style:none;
+   margin:0;
+   padding: 8px 25px 8px 0px;
+   position:relative;
+   right:50%;
+}
+#centeredmenu ul li a {
+   margin:0 0 0 1px;
+   padding:3px 10px;
+   text-decoration:none;
+   line-height:1.3em;
+   color: black;
+}

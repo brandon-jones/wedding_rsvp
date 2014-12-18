@@ -1,0 +1,51 @@
+</br>
+
+<%= form_tag(export_rsvps_path, method: "get", class: "form-horizontal center-text", target: "_blank") do %>
+  <div class="control-group">
+    <div class="controls form-inline">
+      <%= hidden_field_tag 'sort_by', params[:sort_by] %>
+      <%= hidden_field_tag 'order_by', params[:order_by] %>
+      <%= hidden_field_tag 'show', params[:show] %>
+      <%= select_tag :extension, options_for_select( {'PDF' => 'pdf', 'CSV' => 'csv'}), { :class => 'btn btn-default btn-lg' } %>
+      <%= submit_tag 'Export whats showing', class: "btn btn-default btn-sm", title: 'Exports current report exactly as you are looking at it.' %>
+    </div>
+  </div>
+<% end %>
+
+<HR>
+
+<div class="center-text">
+  </br>
+  <b>Total people attending:</b> <%= @total_count %>
+  </br>
+</div>
+
+</br>
+
+<table class="table table-striped table-bordered" id="rsvp-table">
+  <thead>
+    <tr>
+      <th width="22"></th>
+      <th width="300"><%= direction_arrow('name') %><a class="sort_col" href="#">Name</a></th>
+      <th width="400"><%= direction_arrow('contact') %><a class="sort_col" href="#">Contact</a></th>
+      <th width="80"><%= direction_arrow('attending') %><a class="sort_col" href="#">Attending</a></th>
+      <th width="100"><%= direction_arrow('party_size') %><a class="sort_col" href="#">Party size</a></th>
+      <th width="20"></th>
+      <th width="20"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rsvps.each_with_index do |rsvp,i| %>
+      <tr>
+        <td><p><%= i+1 %></p></td>
+        <td><p><%= rsvp.name %></p></td>
+        <td><p><%= rsvp.contact %></p></td>
+        <td><p><%= noramlize_bool(rsvp.attending) %></p></td>
+        <td><p><%= rsvp.party_size %></p></td>
+        <td><p><%= link_to 'Edit', "/rsvps/#{rsvp.id}/edit?sort_by=#{params[:sort_by]}&order_by=#{params[:order_by]}&show=#{params[:show]}", class: 'map-link' %></p></td>
+        <td><p><%= link_to 'Destroy', "/rsvps/#{rsvp.id}?sort_by=#{params[:sort_by]}&order_by=#{params[:order_by]}&show=#{params[:show]}", method: :delete, class: 'map-link',data: { confirm: 'Are you sure?' } %></p></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
