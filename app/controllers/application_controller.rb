@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate
   	authenticate_or_request_with_http_basic do |username, password|
-	    if(username == $user['name'] && password == $user['password'])
+	    if(username == ENV["ZK_NAME"] && password == ENV["ZK_PASSWORD"])
 	      true
 	    else
 	      redirect_to root_path
