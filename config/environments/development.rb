@@ -21,8 +21,8 @@ WeddingRsvp::Application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'example.com',
-    user_name:            'zkforever.am@gmail.com',
-    password:             'z@chat1e',
+    user_name:            ENV["ZKFOREVER_GMAIL_USERNAME"],
+    password:             ENV["ZKFOREVER_GMAIL_PASSWORD"],
     authentication:       'plain',
     enable_starttls_auto: true  }
 
