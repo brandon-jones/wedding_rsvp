@@ -48,11 +48,11 @@ class GuestbooksController < ApplicationController
   def create
     @guestbook = Guestbook.new(guestbook_params)
 
-      if @guestbook.save
+      # if @guestbook.save
         redirect_to guestbooks_path, notice: 'Thank you for leaving a message.'
-      else
-        render action: 'new'
-      end
+      # else
+      #   render action: 'new'
+      # end
   end
 
   # DELETE /guestbooks/1

@@ -99,22 +99,22 @@ class RsvpsController < ApplicationController
   # POST /rsvps
   # POST /rsvps.json
   def create
-    @rsvp = Rsvp.new(rsvp_params)
-    if @rsvp.attending == true && @rsvp.party_size < 1
-      redirect_to new_rsvp_path, notice: 'Party size can not be 0 if you say you are attending'
-    elsif Rsvp.where(contact: @rsvp.contact.split(' ').map {|w| w.capitalize }.join(' ')).count > 0
-      redirect_to new_rsvp_path, notice: "Contact info already registered. Email zkForever.am@gmail.com with your contact info if you want to verify your RSVP"
-    else
-      if @rsvp.save
-        if @rsvp.attending == false
-          redirect_to root_path, notice: 'We are sorry you can not make it.'
-        else
+    # @rsvp = Rsvp.new(rsvp_params)
+    # if @rsvp.attending == true && @rsvp.party_size < 1
+    #   redirect_to new_rsvp_path, notice: 'Party size can not be 0 if you say you are attending'
+    # elsif Rsvp.where(contact: @rsvp.contact.split(' ').map {|w| w.capitalize }.join(' ')).count > 0
+    #   redirect_to new_rsvp_path, notice: "Contact info already registered. Email zkForever.am@gmail.com with your contact info if you want to verify your RSVP"
+    # else
+    #   if @rsvp.save
+    #     if @rsvp.attending == false
+    #       redirect_to root_path, notice: 'We are sorry you can not make it.'
+    #     else
           redirect_to root_path, notice: 'We look forward to seeing you there.'
-        end
-      else
-        render action: 'new'
-      end
-    end
+    #     end
+    #   else
+    #     render action: 'new'
+    #   end
+    # end
   end
 
   # PATCH/PUT /rsvps/1
