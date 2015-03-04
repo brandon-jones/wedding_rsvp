@@ -9,6 +9,7 @@ Slideshow to show some main images. Has now been changed to include the link for
 ==== RSVP
 
 Allows users to put in their name, a way to content them and if they are going to the wedding or not. If they are javascript shows a field for the user to put in how many will be in their party.
+**admin page** simple http auth that then shows a javascript sortable table. This table will export its current view to a PDF. For example you can show only guests that are going sorted by party size and then export this report.
 
 ==== Registry
 
@@ -17,6 +18,14 @@ Simple image links to their registry
 ==== Guestbook
 
 Allows anyone to put their name and message in a forum.
+Also has the following features:
+*  messages can be flagged
+*  a flagged message can not be flagged again
+*  flagged messages send an email the admin if dont through a user, stupid bots
+*  once a message is flagged it is shown to the admin in a second table that means it needs to be delt with.
+*  once flagged message is approved it can not be flagged again.
+
+**admin page** simple http auth that then shows a simple table that is exportable to a pdf. 
 
 ==== Hotels
 
