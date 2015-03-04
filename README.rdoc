@@ -1,28 +1,23 @@
-== README
+== ZKforever.com
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a small website I created for my sister and her now husband. i have split it into different sections
 
-Things you may want to cover:
+==== Home
 
-* Ruby version
+Slideshow to show some main images. Has now been changed to include the link for the songs that my sisters husband wrote the wedding. Also includes a link to the imgur album to view the images.
 
-* System dependencies
+==== RSVP
 
-* Configuration
+Allows users to put in their name, a way to content them and if they are going to the wedding or not. If they are javascript shows a field for the user to put in how many will be in their party.
 
-* Database creation
+==== Registry
 
-* Database initialization
+Simple image links to their registry
 
-* How to run the test suite
+==== Guestbook
 
-* Services (job queues, cache servers, search engines, etc.)
+Allows anyone to put their name and message in a forum.
 
-* Deployment instructions
+==== Hotels
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+List of hotels in the area along with info on the hotel that the wedding party set up a discount with.
