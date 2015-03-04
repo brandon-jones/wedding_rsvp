@@ -1,0 +1,10 @@
+.row-fluid
+  #my-home-form.col-md-8.col-md-offset-2.center-text
+    - flash.each do |name, msg|
+      = content_tag :div, msg, class: name, id: 'top-notice'
+    %div
+      = render 'image_carousel'
+    %p.font-medium We want to thank everyone that made this wedding possible. It was a great night had by all.
+    %p.font-medium If you enjoyed the music that Zack created for the wedding you can download it below
+    %p.font-medium
+      %a{href: "http://noisetrade.com/zacklacom/zack-and-katies-wedding-music"} http://noisetrade.com/zacklacom/zack-and-katies-wedding-music

@@ -24,6 +24,8 @@ gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'haml-rails', '~> 0.8.2'
+
 # twitter bootstrap
 # gem "therubyracer"
 # gem "less-rails"

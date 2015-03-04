@@ -1,0 +1,37 @@
+- if @rsvp.errors.any?
+  #error_explanation
+    %h2
+      = pluralize(@rsvp.errors.count, "error")
+      prohibited rsvp from being saved:
+    %ul
+      - @rsvp.errors.full_messages.each do |msg|
+        %li= msg
+= form_for(@rsvp, html: {role: 'form' }) do |f|
+  = hidden_field_tag 'sort_by', params[:sort_by]
+  = hidden_field_tag 'order_by', params[:order_by]
+  = hidden_field_tag 'show', params[:show]
+  .field.control-label.form-group.center-text
+    %p
+      = f.label :name
+      %small Family or Individual name
+      = f.text_field :name, required: '', class: 'form-control'
+  .field.control-label.form-group.center-text
+    %p
+      = f.label :contact
+      %small Email, Phone Number or Address
+      = f.text_field :contact, required: '', class: 'form-control'
+  #attending_js.field.control-label.form-group.center-text
+    .rd-button
+      = f.label :NOT_attending
+      = f.radio_button :attending, false, checked: true, class: 'radio-inline'
+    .rd-button
+      = f.label :attending
+      = f.radio_button :attending, true, class: 'radio-inline rd-button'
+  #party_size_js.field.control-label.disabled.form-group.center-text{style: "display:none;"}
+    %p
+      = f.label :party_size
+      %small Total people in your party including yourself
+      = f.number_field :party_size, class: 'form-control', value: "#{@default_value}"
+  .row
+    .col-md-12.form-group.center-text
+      %p= f.submit 'RSVP', class: "btn btn-default btn-lg disabled"

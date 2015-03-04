@@ -1,0 +1,10 @@
+.row
+  .col-md-10.col-md-offset-1.white-background
+    %h1.text-center.body-title SHOWING ALL RSVPs
+    - flash.each do |name, msg|
+      = content_tag :div, msg, class: "#{name} center-text"
+    .control-group
+      .controls.form-inline.center-text
+        Show #{select_tag :show, options_for_select( {'All' => 'all', 'Only Going' => 'only_going', 'Only Not Going' => 'only_not_going'}, params[:show]), { :class => 'btn btn-default btn-lg', :id => 'visible_options' }}
+    #table-js
+      = render partial: 'rsvp_list'

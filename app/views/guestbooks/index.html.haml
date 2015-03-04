@@ -1,0 +1,35 @@
+.row-fluid
+  #my-form.col-md-10.col-md-offset-1
+    #title-bar.row
+      .col-md-12
+        %h1.center-text GUESTBOOK
+        %div{align: "right"}
+          %p= link_to('Admin', manage_guestbooks_path, class: 'black-href')
+        - flash.each do |name, msg|
+          = content_tag :div, msg, class: "#{name} center-text"
+    #grey-background.row
+      .col-md-6
+        = image_tag("love_quote.jpg", :alt => "image", class: 'img-rounded img-responsive love-quote')
+      .col-md-6
+        = render partial: 'form'
+.row
+  .col-md-10.col-md-offset-1
+    = paginate @guestbooks
+    #user-form
+      - @guestbooks.each do |guestbook|
+        .row.list-item
+          .col-md-1
+            %div{title: "Report for inapropriate content"}
+              %p= flag_status(guestbook)
+          .col-md-7
+            %div
+              %b
+              %p= guestbook.name
+          .col-md-3
+            %div
+              %i
+              %p= local_time(guestbook.created_at)
+          .row
+            .col-md-12
+              %div
+                %p= guestbook.message

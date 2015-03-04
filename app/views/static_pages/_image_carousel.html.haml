@@ -1,0 +1,35 @@
+/
+  Carousel - consult the Twitter Bootstrap docs at
+  http://twitter.github.com/bootstrap/javascript.html#carousel
+#this-carousel-id.carousel.slide{"data-ride" => "carousel"}
+  / class of slide for animation
+  %ol.carousel-indicators
+    %li.active{"data-slide-to" => "0"}
+    %li{"data-slide-to" => "1"}
+    %li{"data-slide-to" => "2"}
+    %li{"data-slide-to" => "3"}
+    %li{"data-slide-to" => "4"}
+    %li{"data-slide-to" => "4"}
+  .carousel-inner
+    .item.active
+      / class of active since it's the first item
+      %img{alt: "", src: "assets/front_slider/0.png"}/
+    .item
+      %img{alt: "", src: "assets/front_slider/3.png"}/
+    .item
+      %img{alt: "", src: "assets/front_slider/2.png"}/
+    .item
+      %img{alt: "", src: "assets/front_slider/1.png"}/
+    .item
+      %img{alt: "", src: "assets/front_slider/4.png"}/
+    .item
+      %img{alt: "", src: "assets/front_slider/5.png"}/
+  / /.carousel-inner
+  /
+    Next and Previous controls below
+    href values must reference the id for this carousel
+  %a.carousel-control.left{"data-slide" => "prev", href: "#this-carousel-id"}
+    %span.glyphicon.glyphicon-chevron-left
+  %a.carousel-control.right{"data-slide" => "next", href: "#this-carousel-id"}
+    %span.glyphicon.glyphicon-chevron-right
+/ /.carousel

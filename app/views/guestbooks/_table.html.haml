@@ -1,0 +1,24 @@
+%thead
+  %tr
+    %th Name
+    %th Created on
+    %th Message
+    %th
+    %th
+%tbody
+  - post.each do |guestbook|
+    %tr
+      %td
+        %p= guestbook.name
+      %td
+        %p= guestbook.created_at.to_formatted_s(:short)
+      %td
+        %p= guestbook.message
+      %td
+        %p= link_to 'Destroy', guestbook, method: :delete,class: 'map-link', data: { confirm: 'Are you sure?' }
+      - if guestbook.flag == false
+        %td
+          %p Approved
+      - else
+        %td
+          %p= link_to 'Approve', approve_guestbook_path(guestbook.id), class: 'map-link'

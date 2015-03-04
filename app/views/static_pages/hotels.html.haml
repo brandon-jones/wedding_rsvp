@@ -1,0 +1,38 @@
+#my-form
+  %h1.center-text HOTELS
+  %p#hotel-welcome
+    %b
+      For our out of town guests we invite you to stay in one of our many hotels and experince the town of Tehachapi. Listed below are most of the hotels found in town. We have left off the hotels that we ourselves would not stay at.
+#main-hotel-list
+  - @hotels.each_with_index do |hotel,index|
+    .row.list-item
+      .col-md-3
+        = image_tag("hotel_images/#{hotel['logo']}", class: 'hotel-images')
+      .col-md-4
+        %p
+          %b= hotel['name']
+          = hotel['address']
+          = hotel['phone']
+          = get_stars(hotel['rating'])
+          = hotel['distance']
+          miles from wedding
+      .col-md-3
+        = image_tag("hotel_images/#{hotel['image']}", class: 'hotel-images')
+      .col-md-1
+        %p
+          = link_to('Map',map_url(hotel['address']),:target => "_blank", class: 'map-link')
+          = link_to('Reservations',hotel['link_to_reservation'],:target => "_blank", class: 'map-link')
+      - if index == 0
+        .row
+          .col-md-10.col-md-offset-1.hotel-notice
+            .warning
+              .panel.panel-danger
+                .panel-heading
+                  %h3.panel-title.center-text Holiday Inn Express group rate information
+                .panel-body.center-text
+                  %p
+                    If you use the code
+                    %b JLW
+                    at the
+                    %b Holiday Inn Express Hotel
+                    reservation site you can get discounted rates, wavied cancellation fees and more.

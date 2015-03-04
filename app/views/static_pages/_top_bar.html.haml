@@ -1,0 +1,28 @@
+%nav#full-nav-bar.navbar-default{role: "navigation"}
+  / Brand and toggle get grouped for better mobile display
+  .navbar-header
+    %button.navbar-toggle{"data-target" => "#centeredmenu", "data-toggle" => "collapse", type: "button"}
+      %span.sr-only Toggle navigation
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    %a.navbar-brand.hidden-sm.hidden-md.hidden-lg{href: "/"} ZKForever
+  / Collect the nav links, forms, and other content for toggling
+  #centeredmenu.collapse.navbar-collapse
+    %ul.nav.navbar-nav
+      %li
+        %a.black-href.shadow-radial{href: root_path}
+          %p.font-large Home
+      %li
+        %a.black-href.shadow-radial{href: new_rsvp_path}
+          %p.font-large RSVP
+      %li
+        %a.black-href.shadow-radial{href: registry_path}
+          %p.font-large Registry
+      %li
+        %a.black-href.shadow-radial{href: guestbooks_path}
+          %p.font-large Guestbook
+      %li
+        %a.black-href.shadow-radial{href: hotels_path}
+          %p.font-large Hotels
+    %ul.nav.navbar-nav.navbar-right

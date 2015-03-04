@@ -1,0 +1,32 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{charset: "utf-8"}/
+    %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
+    %title Zack and Katie Forever
+    %script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
+    %link{href: "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", rel: "stylesheet"}/
+    / Latest compiled and minified CSS
+    %link{href: "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", rel: "stylesheet"}/
+    / Optional theme
+    %link{href: "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css", rel: "stylesheet"}/
+    / Latest compiled and minified JavaScript
+    %script{src: "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"}
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    = stylesheet_link_tag    "application", media: "all"
+  %body
+    #header.row
+      .col-md-8.col-md-offset-2
+        = image_tag("top_image.png", :alt => "banner", :id => 'top-image', class: 'img-responsive')
+    #top-bar.row
+      .col-md-8.col-md-offset-2
+        = render partial: 'static_pages/top_bar'
+    .row
+      #main-body.col-md-8.col-md-offset-2
+        = yield
+    #footer.row
+      .col-md-8.col-md-offset-2
+        = image_tag("elephants.png", :alt => "banner", class: 'img-responsive', id: 'footer-image')

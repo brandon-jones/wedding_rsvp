@@ -1,0 +1,16 @@
+.row
+  .col-md-10.col-md-offset-1.white-background
+    %h1.center-text.body-title MANAGING GUESTBOOK
+    - if @flagged.count > 0
+      #my-boarder
+        %h3.center-text Flagged Messages
+        %table.table.table-bordered
+          = render 'table', :post => @flagged
+      %br/
+    %h3.center-text All Messages
+    = paginate @guestbooks
+    %div{align: "right"}
+      = link_to('Export All', export_guestbooks_path, target: "_blank")
+    %table.table.table-striped.table-bordered
+      = render 'table', :post => @guestbooks
+    %br/
