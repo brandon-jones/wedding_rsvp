@@ -12,14 +12,6 @@
  *= require_tree .
  */
 
-#top-nav-bar {
-	margin-bottom: 20px;
-	border: 1px solid;
-  border-radius: 10px;
-  background-image: url('ribbon.png');
-}
-
-
 #wedding-bar {
 	ul {
 		width: 100%;
@@ -244,8 +236,6 @@ a:active {color: black;}
 	padding: 10px 10px;
 }
 
-
-
 #centeredmenu {
   float:left;
   width:100%;
@@ -254,8 +244,25 @@ a:active {color: black;}
 	margin-bottom: 20px;
 	border: 1px solid;
   border-radius: 10px;
-  background-image: url('ribbon.png');
+  background-image: url('ribbon.png') !important;
 }
+
+#full-nav-bar {
+	background-image: url('ribbon.png');
+	color: black !important;
+	& .navbar-brand {
+		color: black;
+	}
+	& button {
+		border-color: black;
+		& span {
+			background-color: black;
+		}
+	}
+}
+
+
+
 #centeredmenu ul {
    list-style:none;
    margin:0;
