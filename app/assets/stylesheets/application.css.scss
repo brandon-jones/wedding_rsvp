@@ -12,28 +12,6 @@
  *= require_tree .
  */
 
-#wedding-bar {
-	ul {
-		width: 100%;
-		li {
-			display: inline;
-			margin-right: auto;
-			margin-left: 3%;
-			a {
-				padding: 0px 0px 0px 0px;
-				p{
-					padding-top: 5px;
-					padding-bottom: 5px;
-					width: 112px;
-					text-align: center;
-					margin-top: 6px;
-					margin-bottom: 6px;
-				}
-			}
-		}
-	}
-}
-
 i.fa {
 	padding-left: 10px;
 	padding-top: 3px;
@@ -74,9 +52,7 @@ body {
 	max-width: 480px;
 }
 
-#main-hotel-list {
-	padding-bottom: 40px;
-}
+
 
 i.flag {
 	color: #d6d6d6;
@@ -103,13 +79,6 @@ div.carousel {
   max-height: 640px;
 }
 
-.my-images {
-	margin-left: auto;
-  margin-right: auto;
-  border: 1px solid;
-  padding: 10px 10px;
-}
-
 #my-boarder {
 	background-color: #ff9999;
   border: 1px solid;
@@ -133,10 +102,6 @@ nav.pagination{
 .page {
 	padding: 10px 10px;
 	font-size: 1.2em;
-}
-
-.padding-5 {
-	padding: 5px 0px 5px 0px;
 }
 
 .page.current {
@@ -171,10 +136,6 @@ li a.buttons-mine:hover{
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-.no-background {
-	background-color: transparent;
 }
 
 p {
@@ -218,8 +179,6 @@ a.map-link:hover {color: black;}
 a.map-link:active {color: blue;}
 
 
-
-
 a:link {color: black;}
 a:visited {color: black;}
 a:hover {color: black; text-decoration: none;}
@@ -245,6 +204,28 @@ a:active {color: black;}
 	border: 1px solid;
   border-radius: 10px;
   background-image: url('ribbon.png') !important;
+  & ul {
+  	list-style:none;
+	  margin:0;
+	  padding:0;
+	  position:relative;
+	  left:50%;
+	  text-align:center;
+  	& li {
+  		list-style:none;
+		  margin:0;
+		  padding: 8px 25px 8px 0px;
+		  position:relative;
+		  right:50%;
+  		& a {
+  			margin:0 0 0 1px;
+			  padding:3px 10px;
+			  text-decoration:none;
+			  line-height:1.3em;
+			  color: black;
+  		}
+  	}
+  }
 }
 
 #full-nav-bar {
@@ -259,29 +240,4 @@ a:active {color: black;}
 			background-color: black;
 		}
 	}
-}
-
-
-
-#centeredmenu ul {
-   list-style:none;
-   margin:0;
-   padding:0;
-   position:relative;
-   left:50%;
-   text-align:center;
-}
-#centeredmenu ul li {
-   list-style:none;
-   margin:0;
-   padding: 8px 25px 8px 0px;
-   position:relative;
-   right:50%;
-}
-#centeredmenu ul li a {
-   margin:0 0 0 1px;
-   padding:3px 10px;
-   text-decoration:none;
-   line-height:1.3em;
-   color: black;
 }
